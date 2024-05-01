@@ -1,0 +1,65 @@
+# --- WORK EXPERIENCE
+[[info.work]]
+link = "https://www.optimabank.kg/index.php?option=com_content&view=article&id=621&lang=en&Itemid=266"
+logo = "images/experience/ob_logo.jpg"
+title = "Java Spring Boot Developer"
+company = "OJSC Optima Bank"
+duration = "September 2022 - Present"
+    [[info.work.description]]
+    point = "Worked on project - Optima Business (OB), remote banking service system for legal entities"
+    [[info.work.description]]
+    point = "Developed integral components of the OB project (microservice architecture) - business and validation rule engine service for payments, service for generating payment documents from templates, service for importing payments using files with custom formats, etc."
+    [[info.work.description]]
+    point = "Wrote and optimized functions/stored procedures in PostgreSQL - search with filtering, unique document number generation based on requirements"
+    [[info.work.description]]
+    point = "Contributed on the development and maintainment of the payment service in OB project"
+    [[info.work.description]]
+    point = "Assisted in configuring and setting up early versions of Gitlab CI/CD processes"
+    [[info.work.description]]
+    point = "Assisted in maintaining some infrastructure related tasks"
+
+[[info.work]]
+link = "https://financesoft.kg/?lang=en"
+logo = "images/experience/fs_logo.png"
+title = "Full Stack .NET Developer"
+company = "FinanceSoft"
+duration = "May 2022 - July 2022 (3 mth.)"
+    [[info.work.description]]
+    point = "Worked on projects - Loan Conveyor, Central Back Office(CBO)"
+    [[info.work.description]]
+    point = "Conducted debugging and maintenance of the existing web applications(Loan Conveyor, CBO)"
+    [[info.work.description]]
+    point = "Implemented and added new components and features to a new conveyor for a new client according to the project requirements(Loan Conveyor)"
+    [[info.work.description]]
+    point = "Performed updates of the test servers with the new project versions"
+
+[[info.work]]
+link = "https://naskr.gov.kg/en/"
+logo = "images/experience/naskr_logo.png"
+title = "Engineer in Institute of Automatics and IT"
+company = "National Academy of Sciences of Kyrgyzstan"
+duration = "December 2019 - May 2020 (6 mth.)"
+    [[info.work.description]]
+    point = "Worked on the project of developing a prototype of air pollution monitoring system for Bishkek"
+    [[info.work.description]]
+    point = "Conducted market research on transceivers and sensor devices"
+    [[info.work.description]]
+    point = "Implemented early version of data management architecture using Mosquitto, Telegraf, InfluxDB, Grafana and Docker technologies"
+    [[info.work.description]]
+    point = "Implemented basic mesh network using NodeMCU devices (with ESP8266 WiFi chips) to transmit data between nodes and store it in database"
+
+
+# --- EDUCATION
+[[info.education]]
+link = "https://www.uniroma1.it/en/pagina-strutturale/home"
+academy = "Sapienza University of Rome"
+logo = "/images/education/sapienza_logo.png"
+title = "MS in Engineering in Computer Science"
+year = "2020 - 2022 (Not Completed)"
+
+[[info.education]]
+link = "https://www.auca.kg/"
+academy = "American University of Central Asia"
+logo = "/images/education/auca_logo.jpeg"
+title = "BA in Software Engineering"
+year = "2016 - 2020"

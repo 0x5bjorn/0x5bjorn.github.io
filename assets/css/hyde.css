@@ -60,7 +60,7 @@ pre {
 
 .sidebar {
   text-align: center;
-  padding: 2rem 1rem;
+  padding: 1rem 1rem;
   color: rgba(255,255,255,.5);
   flex-shrink: 0;
 }
@@ -110,14 +110,14 @@ pre {
   color: var(--sidebar-h1-color);
   margin-top: 0;
   font-weight:300;
-  font-size: 1.5em;
+  font-size: 1.2em;
   font-family: "Abril Fatface", serif;
 }
 
 /* Sidebar nav */
 .sidebar-nav {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
   padding-left: 0;
   list-style: none;
 }
@@ -159,8 +159,8 @@ a.sidebar-nav-item:focus {
  */
 
 .content {
-  padding-top:    2rem;
-  padding-bottom: 2rem;
+  padding-top:    1rem;
+  padding-bottom: 1rem;
 }
 
 @media (min-width: 48em) {
@@ -216,7 +216,7 @@ a.sidebar-nav-item:focus {
 
 @media (min-width: 64em) {
   .content {
-    max-width: 44rem;
+    max-width: 54%;
     margin-left: 1.75rem;
     margin-right: 2rem;
   }

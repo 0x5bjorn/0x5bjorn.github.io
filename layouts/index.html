@@ -1,5 +1,6 @@
-{{ define "main" -}}
-<div class="posts">
+{{ define "main" }}
+{{ $about_info := .Site.Data.about.info }}
+<!-- <div class="posts">
     {{ $frontPageTypes := default (slice "posts") .Site.Params.front_page_content }}
     {{ range (.Paginate (where .Site.RegularPages "Type" "in" $frontPageTypes)).Pages }}
     <article class="post">
@@ -17,5 +18,57 @@
     </article>
     {{- end }}
 </div>
-{{ partial "pagination.html" . }}
-{{- end }}
+{{ partial "pagination.html" . }} -->
+{{ if .Site.Params.light_dark }}
+    {{ partial "light_dark.html" . }}
+{{ end }}
+<div class="post">
+    {{ with .Site.GetPage "/about" }}
+        {{ if .Pages }}
+            {{ range .Pages }}
+                <h1 class="post-title">{{ .Title }}</h1>
+                <!-- MD CONTENT -->
+                {{ .Content }}
+
+                <!-- WORK EXPERIENCE -->
+                {{ range $about_info.work }}
+                <h3 class="post-title">Work Experience</h3>
+                <div style="display: inline-block;">
+                    <a href="{{ .link }}" target="_blank"><img src="{{ .logo }}" width="64px" style="float: left; margin-right: 1rem;"></a>
+                    <b><a href="{{ .link }}" target="_blank">{{ .company }}</a></b> | {{ .duration }} | <i> {{ .title }} </i>
+                </div>
+                <ul>
+                    {{ range .description }}
+                    <li><sub>{{ .point }}</sub></li>
+                    {{ end }}
+                </ul>
+                <!-- <p><sub>asd</sub></p> -->
+                {{ end }}
+                <hr>
+
+                <!-- EDUCATION -->
+                <h3 class="post-title">Education</h3>
+                <div style="text-align: left; display: grid; grid-template-columns: 1fr 1fr;">
+                    {{ range $about_info.education }}
+                    <div>
+                        <a href="{{ .link }}" target="_blank">
+                            <img src="{{ .logo }}" height="128px" width="128px"></a>
+                        <b><a href="{{ .link }}" target="_blank">{{ .academy }}</a></b>
+                        <br>
+                        {{ .year }}
+                        <br>
+                        <i> {{ .title }} </i>
+                    </div>
+                    {{ end }}
+                </div>
+            {{ end }}
+        {{ else }}
+            <h1 class="post-title">{{ .Title }}</h1>
+            {{ .Content }}
+        {{ end }}
+    {{ end }}
+    {{ if (.Site.Params.listmonk) }}
+        {{ partial "post/listmonk_email_newsletters.html" . }}
+    {{ end }}
+</div>
+{{ end }}
