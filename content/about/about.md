@@ -4,7 +4,7 @@ title: "About"
 > [PDF (ENG)](/files/CV_Resume_eng.pdf) | [PDF (RU)](/files/CV_Resume_rus.pdf)
 ___
 ### Summary
-Wanna be Software Engineer interested in Low-Level Engineering, Computer Graphics, System Design, rebuilding existing "*round wheels*" as "*square*" ones and passionate for low-level concepts and underlying implementations.  
+Software Engineer, with passion for low-level concepts and underlying implementations, interested in Low-Level Engineering, Computer Graphics, System Design. As well as enthusiastic about rebuilding existing "*round wheels*" as "*square*" ones.
 #### Currently learning
 - Graphics programming with OpenGL and C++
 - Rust programming language
