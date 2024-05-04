@@ -4,9 +4,16 @@ title: "About"
 > [PDF (ENG)](/files/CV_Resume_eng.pdf) | [PDF (RU)](/files/CV_Resume_rus.pdf)
 ___
 ### Summary
-Interested in System Design and Low-Level Engineering.  
-Passion for low-level concepts and underlying implementations.
+Wanna be Software Engineer interested in Low-Level Engineering, Computer Graphics, System Design, rebuilding existing "*round wheels*" as "*square*" ones and passionate for low-level concepts and underlying implementations.  
+#### Currently self-learning
+- Graphics programming with OpenGL and C++
+- Rust programming language
 ___
 ### General Experience
+- Basics in Computer and Network Security, Database Management, Computer Graphics, Embedded Systems, Machine Learning
+- Linux loadable kernel module (LKM) development
+- Docker/Docker Compose deployment
+- Gitlab CI/CD configuration
+- Version Control with Git
 ___
 
