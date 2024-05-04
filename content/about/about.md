@@ -5,7 +5,7 @@ title: "About"
 ___
 ### Summary
 Wanna be Software Engineer interested in Low-Level Engineering, Computer Graphics, System Design, rebuilding existing "*round wheels*" as "*square*" ones and passionate for low-level concepts and underlying implementations.  
-#### Currently self-learning
+#### Currently learning
 - Graphics programming with OpenGL and C++
 - Rust programming language
 ___
