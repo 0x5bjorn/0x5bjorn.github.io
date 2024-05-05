@@ -12,7 +12,7 @@ ___
 ### General Experience
 - TUI programs/tools development using Rust with [Ratatui](https://github.com/ratatui-org/ratatui)
 - Desktop application development using C++ with [ImGui](https://github.com/ocornut/imgui) or Rust with [egui](https://github.com/emilk/egui)
-- Backend development in microservice architecture using Spring Boot, RabbitMQ, GraphQL
+- Web application backend development in microservice architecture using Spring Boot, RabbitMQ, GraphQL
 - Version Control with Git
 - Docker/Docker Compose deployment
 - Gitlab CI/CD configuration
