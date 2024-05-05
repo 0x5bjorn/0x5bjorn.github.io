@@ -5,7 +5,7 @@ title: "About"
 ___
 ### Summary
 Software Engineer, with passion for low-level concepts and underlying implementations, interested in Low-Level Engineering, Computer Graphics, System Design. As well as enthusiastic about rebuilding existing "*round wheels*" as "*square*" ones.
-#### Currently learning
+#### Current personal activities
 - Graphics programming with OpenGL and C++
 - Rust programming language
 ___
