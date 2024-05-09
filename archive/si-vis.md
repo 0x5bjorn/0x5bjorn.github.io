@@ -1,4 +1,4 @@
----
+<!-- ---
 title: "System Info visualizer"
 date: 2023-08-01
 draft: false
@@ -31,4 +31,4 @@ Processes info table tab
 - Change UI from `egui` to [ratatui](https://github.com/ratatui-org/ratatui)
 - Reorganize app layout
 - Add sorting based on columns in processes info table
-- Display memory allocations in real-time when specific process is selected (inspired by [mevi](https://github.com/fasterthanlime/mevi))
+- Display memory allocations in real-time when specific process is selected (inspired by [mevi](https://github.com/fasterthanlime/mevi)) -->
