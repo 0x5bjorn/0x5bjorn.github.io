@@ -8,11 +8,11 @@ duration = "September 2022 - Present"
     [[info.work.description]]
     point = "Worked on project - Optima Business (OB), remote banking service system for legal entities"
     [[info.work.description]]
-    point = "Developed integral components of the OB project (microservice architecture) - business and validation rule engine service for payments, service for generating payment documents from templates, service for importing payments using files with custom formats, etc."
-    [[info.work.description]]
-    point = "Wrote and optimized functions/stored procedures in PostgreSQL - search with filtering, unique document number generation based on requirements"
+    point = "Developed integral components of the OB project (microservice architecture) - business and validation rule engine service for payments, service for generating documents based on templates, service for importing payments using files with custom formats, etc."
     [[info.work.description]]
     point = "Contributed on the development and maintainment of the payment service in OB project"
+    [[info.work.description]]
+    point = "Created PostgreSQL functions/stored procedures for searching with filtering, unique document number generation based on requirements, etc."
     [[info.work.description]]
     point = "Assisted in configuring and setting up early versions of Gitlab CI/CD processes"
     [[info.work.description]]
