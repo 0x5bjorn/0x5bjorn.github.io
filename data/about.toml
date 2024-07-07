@@ -16,6 +16,8 @@ duration = "September 2022 - Present"
     [[info.work.description]]
     point = "Assisted in configuring and setting up early versions of Gitlab CI/CD processes"
     [[info.work.description]]
+    point = "Performed research works on topic of Electronic Digital Signature specifically Rutoken technology and Simple Certificate Enrollment Protocol(SCEP)"
+    [[info.work.description]]
     point = "Assisted in maintaining some infrastructure related tasks"
 
 [[info.work]]
