@@ -145,8 +145,8 @@ body > .wrapper {
     width: 180px;
 }
 .social {
-    margin-right: 0.5em;
-    margin-left: 0.5em;
+    margin-right: 0.4em;
+    margin-left: 0.4em;
     text-decoration: none !important;
     color: var(--sidebar-socials-color) !important;
 }
