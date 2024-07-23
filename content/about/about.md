@@ -18,7 +18,7 @@ ___
 - Gitlab CI/CD configuration
 - Comfortable with Linux systems
 - Linux loadable kernel module (LKM) development using C
-- Basics in Machine Learning using Python with corresponding libraries
 - Basics in Computer and Network Security, Database Management, Computer Graphics, Embedded Systems
+- Basics in Machine Learning using Python with corresponding libraries
 ___
 
