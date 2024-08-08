@@ -27,7 +27,7 @@ logo = "images/experience/fs_logo.png"
 company = "FinanceSoft"
 duration = "May 2022 - July 2022 (3 mth.)"
 title = "Full Stack Developer"
-techStack = ""
+techStack = "C#, .NET Core, Typescript, Angular, MSSQL, Transact-SQL"
     [[info.work.description]]
     point = "Worked on projects - Loan Conveyor, Central Back Office(CBO)"
     [[info.work.description]]
