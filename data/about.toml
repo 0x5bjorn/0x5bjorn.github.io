@@ -2,9 +2,10 @@
 [[info.work]]
 link = "https://www.optimabank.kg/index.php?option=com_content&view=article&id=621&lang=en&Itemid=266"
 logo = "images/experience/ob_logo.jpg"
-title = "Java Spring Boot Developer"
 company = "OJSC Optima Bank"
 duration = "September 2022 - Present"
+title = "Back End Developer"
+techStack = "Microservices, Java, Spring Boot, PostgreSQL, GraphQL, RabbitMQ, REST APIs, Docker, Gitlab CI/CD"
     [[info.work.description]]
     point = "Worked on project - Optima Business (OB), remote banking service system for legal entities"
     [[info.work.description]]
@@ -23,9 +24,10 @@ duration = "September 2022 - Present"
 [[info.work]]
 link = "https://financesoft.kg/?lang=en"
 logo = "images/experience/fs_logo.png"
-title = "Full Stack .NET Developer"
 company = "FinanceSoft"
 duration = "May 2022 - July 2022 (3 mth.)"
+title = "Full Stack Developer"
+techStack = ""
     [[info.work.description]]
     point = "Worked on projects - Loan Conveyor, Central Back Office(CBO)"
     [[info.work.description]]
@@ -38,9 +40,10 @@ duration = "May 2022 - July 2022 (3 mth.)"
 [[info.work]]
 link = "https://naskr.gov.kg/en/"
 logo = "images/experience/naskr_logo.png"
-title = "Engineer in Institute of Automatics and IT"
 company = "National Academy of Sciences of Kyrgyzstan"
 duration = "December 2019 - May 2020 (6 mth.)"
+title = "Engineer in Institute of Automatics and IT"
+techStack = "C/C++ with Arduino, Mosquitto, Telegraf, InfluxDB, Docker"
     [[info.work.description]]
     point = "Worked on the project of developing a prototype of air pollution monitoring system for Bishkek"
     [[info.work.description]]
