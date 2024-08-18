@@ -9,7 +9,7 @@ techStack = "Microservices, Java, Spring Boot, PostgreSQL, GraphQL, RabbitMQ, RE
     [[info.work.description]]
     point = "Worked on project - Optima Business (OB), remote banking system for legal entities"
     [[info.work.description]]
-    point = "Developed integral components of the OB (microservice architecture): business and validation rule engine service for payments, template-based document generation service, service for importing payments using 1C files, etc."
+    point = "Developed integral components of the OB (microservice architecture): business and validation rule engine service for payments, template-based document generation service, service for importing payments using 1C files, payment monitoring service, etc."
     [[info.work.description]]
     point = "Contributed on the development and maintainment of the main payment service in OB project"
     [[info.work.description]]
