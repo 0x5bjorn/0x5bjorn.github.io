@@ -5,21 +5,21 @@ logo = "images/experience/ob_logo.jpg"
 company = "OJSC Optima Bank"
 duration = "September 2022 - Present"
 title = "Back End Developer"
-techStack = "Microservices, Java, Spring Boot, PostgreSQL, GraphQL, RabbitMQ, REST APIs, Docker, Gitlab CI/CD"
+techStack = "Microservices, Java, Spring Boot, PostgreSQL, GraphQL, RabbitMQ, REST APIs, Docker, Gitlab CI/CD, Grafana, Redis"
     [[info.work.description]]
-    point = "Worked on project - Optima Business (OB), remote banking service system for legal entities"
+    point = "Worked on project - Optima Business (OB), remote banking system for legal entities"
     [[info.work.description]]
-    point = "Developed integral components of the OB project (microservice architecture) - business and validation rule engine service for payments, service for generating documents based on templates, service for importing payments using files with custom formats, etc."
+    point = "Developed integral components of the OB (microservice architecture): business and validation rule engine service for payments, template-based document generation service, service for importing payments using 1C files, etc."
     [[info.work.description]]
-    point = "Contributed on the development and maintainment of the payment service in OB project"
+    point = "Contributed on the development and maintainment of the main payment service in OB project"
     [[info.work.description]]
-    point = "Created PostgreSQL functions/stored procedures for searching with filtering, unique document number generation based on requirements, etc."
+    point = "Created PostgreSQL functions/stored procedures such as payment search with filters, pseudo-unique document number generation, etc."
     [[info.work.description]]
     point = "Assisted in configuring and setting up early versions of Gitlab CI/CD processes"
     [[info.work.description]]
-    point = "Performed research works on topic of Electronic Digital Signature specifically Rutoken technology and Simple Certificate Enrollment Protocol(SCEP)"
+    point = "Assisted our DevOps engineer in maintaining and monitoring system infrastructurev"
     [[info.work.description]]
-    point = "Assisted in maintaining some infrastructure related tasks"
+    point = "Performed research works on topic of Electronic Digital Signature specifically Rutoken technology and Simple Certificate Enrollment Protocol(SCEP)"
 
 [[info.work]]
 link = "https://financesoft.kg/?lang=en"
