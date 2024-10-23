@@ -6,6 +6,7 @@ ___
 ### Summary
 Software Engineer, with passion for low-level concepts and underlying implementations, interested in Low-Level Engineering, System Development, Computer Graphics. Enthusiastic about rebuilding existing "*round wheels*" as "*square*" ones.
 #### Current personal activities
+- Go programming language
 - Graphics programming with OpenGL and C++
 - Rust programming language
 ___
