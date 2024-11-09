@@ -8,7 +8,7 @@
 
   /* Style the buttons that are used to open the tabs content */
   .tabs button {
-    font-family: Monaspace Krypton;
+    font-family: Nunito SemiBold;
     font-size: 0.8em;
     background-color: var(--bkg-color);
     color: var(--text-color);
@@ -30,7 +30,7 @@
 
   /* Style the buttons that are used to open the tabs content */
   .tabs button {
-    font-family: Monaspace Krypton;
+    font-family: Nunito SemiBold;
     font-size: 0.8em;
     background-color: var(--bkg-color);
     color: var(--text-color);
