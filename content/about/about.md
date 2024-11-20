@@ -6,9 +6,8 @@ ___
 ### Summary
 Software Engineer, with the *"I can figure it out"* mindset and passion for low-level concepts and underlying implementations. Interested in **Low-Level Engineering**, **System Development**, **Computer Graphics**. Enthusiastic about rebuilding existing *"round wheels"* as *"square"* ones.
 #### Current personal activities
-- Go programming language
-- Graphics programming with OpenGL and C++
-- Rust programming language
+- Basic Continuous Integration (CI) type of system using Go to learn the language 
+- Memory Allocation Strategies using C
 ___
 ### General Experience
 - Web application backend development in microservice architecture using Spring Boot, RabbitMQ, GraphQL, RESTful API
