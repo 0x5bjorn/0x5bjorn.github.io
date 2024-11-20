@@ -6,7 +6,7 @@ ___
 ### Summary
 Software Engineer, with the *"I can figure it out"* mindset and passion for low-level concepts and underlying implementations. Interested in **Low-Level Engineering**, **System Development**, **Computer Graphics**. Enthusiastic about rebuilding existing *"round wheels"* as *"square"* ones.
 #### Current personal activities
-- Basic Continuous Integration (CI) type of system using Go to learn the language 
+- Go programming language 
 - Memory Allocation Strategies using C
 ___
 ### General Experience
