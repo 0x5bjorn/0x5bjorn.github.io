@@ -46,6 +46,8 @@ pluralizelisttitles = false   # removes the automatically appended "s" on sideba
     # twitter_url = "https://twitter.com"
     # xmpp_url = "https://xmpp.org"
     # youtube_url = "https://youtube.com"
+    pdf_url_1 = "https://0x5bjorn.github.io/files/CV_Resume_eng.pdf"
+    pdf_url_2 = "https://0x5bjorn.github.io/files/CV_Resume_rus.pdf"
 
     # NOTE: If you don't want to use RSS, comment or delete the following lines
     # Adds an RSS icon to the end of the socials which links to {{ .Site.BaseURL }}/index.xml
