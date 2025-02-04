@@ -6,8 +6,8 @@ company = "O! Mobile Operator"
 duration = "January 2025 - Present"
 title = "Software Developer"
 techStack = ""
-    [[info.work.description]]
-    point = ""
+    # [[info.work.description]]
+    # point = ""
 
 
 [[info.work]]
