@@ -1,9 +1,20 @@
 # --- WORK EXPERIENCE
 [[info.work]]
+link = "https://o.kg/"
+logo = "images/experience/o_mob.jpg"
+company = "O! Mobile Operator"
+duration = "January 2025 - Present"
+title = "Software Developer"
+techStack = ""
+    [[info.work.description]]
+    point = ""
+
+
+[[info.work]]
 link = "https://www.optimabank.kg/index.php?option=com_content&view=article&id=621&lang=en&Itemid=266"
 logo = "images/experience/ob_logo.jpg"
 company = "OJSC Optima Bank"
-duration = "September 2022 - Present"
+duration = "September 2022 - December 2024 (2 y. 4 mth.)"
 title = "Back End Developer"
 techStack = "Microservices, Java, Spring Boot, PostgreSQL, GraphQL, RabbitMQ, REST APIs, Docker, Gitlab CI/CD, Grafana, Redis"
     [[info.work.description]]
