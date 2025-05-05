@@ -3,8 +3,8 @@
 link = "https://www.optimabank.kg/index.php?option=com_content&view=article&id=621&lang=en&Itemid=266"
 logo = "images/experience/ob_logo.jpg"
 company = "OJSC Optima Bank"
-duration = "September 2022 - December 2024 (2 y. 4 mth.)"
-title = "DevOps & Back End Developer"
+duration = "March 2025 - Present"
+title = "DevOps & Software Engineer"
 techStack = "Docker Swarm, Gitlab CI/CD, Nginx, Grafana, Java, Keycloak"
     [[info.work.description]]
     point = "Docker Swarm cluster management and maintenance"
