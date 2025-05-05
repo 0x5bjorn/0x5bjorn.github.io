@@ -1,14 +1,29 @@
 # --- WORK EXPERIENCE
 [[info.work]]
+link = "https://www.optimabank.kg/index.php?option=com_content&view=article&id=621&lang=en&Itemid=266"
+logo = "images/experience/ob_logo.jpg"
+company = "OJSC Optima Bank"
+duration = "September 2022 - December 2024 (2 y. 4 mth.)"
+title = "DevOps & Back End Developer"
+techStack = "Docker Swarm, Gitlab CI/CD, Nginx, Grafana, Java, Keycloak"
+    [[info.work.description]]
+    point = "Docker Swarm cluster management and maintenance"
+    [[info.work.description]]
+    point = "Gitlab CI/CD automation and configuration"
+    [[info.work.description]]
+    point = "Nginx configuration and maintenance"
+    [[info.work.description]]
+    point = "Keycloak custom plugin development"
+
+[[info.work]]
 link = "https://o.kg/"
 logo = "images/experience/o_mob.jpg"
 company = "O! Mobile Operator"
-duration = "January 2025 - Present"
+duration = "January 2025 - February 2025 (2 mth.)"
 title = "Software Developer"
-techStack = ""
+techStack = "Java, Spring Framework, Apache Karaf, Oracle"
     # [[info.work.description]]
     # point = ""
-
 
 [[info.work]]
 link = "https://www.optimabank.kg/index.php?option=com_content&view=article&id=621&lang=en&Itemid=266"
