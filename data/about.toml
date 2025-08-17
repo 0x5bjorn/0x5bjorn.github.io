@@ -1,0 +1,103 @@
+# --- WORK EXPERIENCE
+[[info.work]]
+link = "https://www.optimabank.kg/index.php?option=com_content&view=article&id=621&lang=en&Itemid=266"
+logo = "images/experience/ob_logo.jpg"
+company = "OJSC Optima Bank"
+duration = "March 2025 - Present"
+title = "DevOps & Software Engineer"
+current = true
+techStack = "Docker Swarm, Gitlab CI/CD, Nginx, Grafana, Java, Keycloak, Software Observability"
+    [[info.work.description]]
+    point = "Docker Swarm cluster management and maintenance"
+    [[info.work.description]]
+    point = "Gitlab CI/CD automation and configuration"
+    [[info.work.description]]
+    point = "Nginx configuration and maintenance"
+    [[info.work.description]]
+    point = "Keycloak custom plugin development"
+
+[[info.work]]
+link = "https://o.kg/"
+logo = "images/experience/o_mob.jpg"
+company = "O! Mobile Operator"
+duration = "January 2025 - February 2025 (2 mth.)"
+title = "Software Developer"
+current = false
+techStack = "Java, Spring Framework, Apache Karaf, Oracle"
+    # [[info.work.description]]
+    # point = ""
+
+[[info.work]]
+link = "https://www.optimabank.kg/index.php?option=com_content&view=article&id=621&lang=en&Itemid=266"
+logo = "images/experience/ob_logo.jpg"
+company = "OJSC Optima Bank"
+duration = "September 2022 - December 2024 (2 y. 4 mth.)"
+title = "Back End Developer"
+current = false
+techStack = "Microservices, Java, Spring Boot, PostgreSQL, GraphQL, RabbitMQ, REST APIs, Docker, Gitlab CI/CD, Grafana, Redis"
+    [[info.work.description]]
+    point = "Worked on project - Optima Business (OB), remote banking system for legal entities"
+    [[info.work.description]]
+    point = "Developed integral components of the OB (microservice architecture): business and validation rule engine service for payments, template-based document generation service, service for importing payments using 1C files, payment monitoring service, etc."
+    [[info.work.description]]
+    point = "Contributed on the development and maintainment of the main payment service in OB project"
+    [[info.work.description]]
+    point = "Created PostgreSQL functions/stored procedures such as payment search with filters, pseudo-unique document number generation, etc."
+    [[info.work.description]]
+    point = "Assisted in configuring and setting up early versions of Gitlab CI/CD processes"
+    [[info.work.description]]
+    point = "Assisted our DevOps engineer in maintaining and monitoring system infrastructure"
+    [[info.work.description]]
+    point = "Performed research works on topic of Electronic Digital Signature specifically Rutoken technology and Simple Certificate Enrollment Protocol(SCEP)"
+
+[[info.work]]
+link = "https://financesoft.kg/?lang=en"
+logo = "images/experience/fs_logo.png"
+company = "FinanceSoft"
+duration = "May 2022 - July 2022 (3 mth.)"
+title = "Full Stack Developer"
+current = false
+techStack = "C#, .NET Core, Typescript, Angular, MSSQL, Transact-SQL"
+    [[info.work.description]]
+    point = "Worked on projects - Loan Conveyor, Central Back Office(CBO)"
+    [[info.work.description]]
+    point = "Conducted debugging and maintenance of the existing web applications(Loan Conveyor, CBO)"
+    [[info.work.description]]
+    point = "Implemented and added new components and features to a new conveyor for a new client according to the project requirements(Loan Conveyor)"
+    [[info.work.description]]
+    point = "Performed updates of the test servers with the new project versions"
+
+[[info.work]]
+link = "https://naskr.gov.kg/en/"
+logo = "images/experience/naskr_logo.png"
+company = "National Academy of Sciences of Kyrgyzstan"
+duration = "December 2019 - May 2020 (6 mth.)"
+title = "Engineer in Institute of Automatics and IT"
+current = false
+techStack = "C/C++ with Arduino, Mosquitto, Telegraf, InfluxDB, Docker"
+    [[info.work.description]]
+    point = "Worked on the project of developing a prototype of air pollution monitoring system for Bishkek"
+    [[info.work.description]]
+    point = "Conducted market research on transceivers and sensor devices"
+    [[info.work.description]]
+    point = "Implemented early version of data management architecture using Mosquitto, Telegraf, InfluxDB, Grafana and Docker technologies"
+    [[info.work.description]]
+    point = "Implemented basic mesh network using NodeMCU devices (with ESP8266 WiFi chips) to transmit data between nodes and store it in database"
+
+
+# --- EDUCATION
+[[info.education]]
+link = "https://www.uniroma1.it/en/pagina-strutturale/home"
+academy = "Sapienza University of Rome"
+logo = "/images/education/sapienza_logo.png"
+title = "MS in Engineering in Computer Science"
+current = false
+year = "2020 - 2022 (Not Completed)"
+
+[[info.education]]
+link = "https://www.auca.kg/"
+academy = "American University of Central Asia"
+logo = "/images/education/auca_logo.jpeg"
+title = "BA in Software Engineering"
+current = false
+year = "2016 - 2020"

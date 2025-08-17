@@ -3,56 +3,93 @@
 {{- $p := .Params }}
 {{- $scratch := newScratch }}
 {{- if isset $p "image" }}
-  {{- $scratch.Set "image" $p.image }}
+{{- $scratch.Set "image" $p.image }}
 {{- else }}
-  {{ $scratch.Set "image" $s.fallBackOgImage }}
+{{ $scratch.Set "image" $s.fallBackOgImage }}
 {{- end }}
 {{- $image := $scratch.Get "image" }}
 {{- $bg := absLangURL (path.Join "images" $image) }}
+{{ $about_info := .Site.Data.about.info }}
 <div class="{{ if ne $p.singleColumn true }}grid-inverse {{ end }}wrap content">
   <article class="post_content">
     {{- $t := .Title }}
     <h1 class="post_title">{{ $t | markdownify }}</h1>
-    {{- partial "post-meta" . }}
     {{- with .Params.featureImage -}}
-      <div class="post_featured">
-        {{- partial "image" (dict "file" $p.featureImage "alt" $p.featureImageAlt "cap" $p.featureImageCap "type" "featured" "Page" $.Page) }}
-      </div>
+    <div class="post_featured">
+      {{- partial "image" (dict "file" $p.featureImage "alt" $p.featureImageAlt "cap" $p.featureImageCap "type"
+      "featured" "Page" $.Page) }}
+    </div>
     {{- end -}}
     {{ if $p.toc }}
-      <div class="post_toc">
-        <h2>{{ T "overview" }}</h2>
-        {{ .TableOfContents }}
-      </div>
+    <div class="post_toc">
+      <h2>{{ T "overview" }}</h2>
+      {{ .TableOfContents }}
+    </div>
     {{ end }}
-    <div class="post_body">
+    <div class="post_body" style="margin-bottom: 3rem;">
       {{- .Content }}
+    </div>
+
+    <div class="timeline">
+      <h1 class="section-title">Job Experience</h1>
+      {{ range $about_info.work }}
+      <div class="timeline-item {{ if .current }} current {{ end }}">
+        <div class="timeline-title"> {{ .title }} @ <a class="company" href="{{ .link }}"> {{ .company }} </a></div>
+        <div class="timeline-status"> {{ .duration }} </div>
+        <div class="timeline-sub-title"> {{ .techStack }} </div>
+        <div class="job-description">
+          <ul>
+            {{ range .description }}
+            <li>{{ .point }}</li>
+            {{ end }}
+          </ul>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+
+    <div class="timeline">
+      <h1 class="section-title">Education</h1>
+      {{ range $about_info.education }}
+      <div class="timeline-item">
+        <div class="timeline-title"> <a class="company" href="{{ .link }}"> {{ .academy }} </a></div>
+        <div class="timeline-status"> {{ .year }} </div>
+        <div class="timeline-sub-title"> {{ .title }} </div>
+        <div class="job-description">
+          <ul>
+            {{ range .description }}
+            <li>{{ .point }}</li>
+            {{ end }}
+          </ul>
+        </div>
+      </div>
+      {{ end }}
     </div>
 
     {{- $showRelatedInArticle := $s.showRelatedInArticle }}
     {{- if eq $p.showRelatedInArticle true }}
-      {{- $showRelatedInArticle = true }}
+    {{- $showRelatedInArticle = true }}
     {{- else if eq $p.showRelatedInArticle false }}
-      {{- $showRelatedInArticle = false }}
+    {{- $showRelatedInArticle = false }}
     {{- end }}
     {{- if (and ($showRelatedInArticle) (isset $p "series")) }}
-      {{- partial "related" . }}
+    {{- partial "related" . }}
     {{- end }}
 
     {{- $showComments := true }}
     {{- if eq $s.comments false }}
-      {{- $showComments = false }}
+    {{- $showComments = false }}
     {{- else if eq $p.comments false }}
-      {{- $showComments = false }}
+    {{- $showComments = false }}
     {{- end }}
     {{- if ne $showComments false }}
-      {{- partial "comments" . }}
+    {{- partial "comments" . }}
     {{- end }}
     {{- partial "i18nlist" . }}
 
   </article>
   {{- if ( ne $p.sidebar false ) }}
-    {{- partial "sidebar" . }}
+  {{- partial "sidebar" . }}
   {{ end }}
 </div>
 {{- end }}

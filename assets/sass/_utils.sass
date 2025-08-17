@@ -1,5 +1,5 @@
 @for $i from 1 through 2
-  $size: $i * 1.5rem
+  $size: $i * 0.5rem
   $x-size: $size * 0.5
   .pt-#{$i}
     padding-top: $size
@@ -9,6 +9,7 @@
 
   .mt-#{$i}
     margin-top: $size
+    margin-bottom: $size + 0.5rem
 
   .mb-#{$i}
     margin-bottom: $size
