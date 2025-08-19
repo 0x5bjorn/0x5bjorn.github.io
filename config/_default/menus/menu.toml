@@ -33,19 +33,19 @@
   name = "github"
   type = "social"
   weight = 1
-  url = "https://github.com/#"
+  url = "https://github.com/0x5bjorn"
 [[social]]
-  name = "X"
+  name = "mail"
   weight = 2
-  url = "https://x.com/#"
+  url = "mailto:0x5bjorn@gmail.com"
 [[social]]
   name = "linkedin"
   weight = 3
-  url = "https://www.linkedin.com/in/#"
-[[social]]
-  name = "rss"
-  weight = 4
-  url = "index.xml"
+  url = "https://www.linkedin.com/in/sultan-umarbaev-0x5bjorn"
+# [[social]]
+#   name = "rss"
+#   weight = 4
+#   url = "index.xml"
 
 # other supported social links
 # name = "youtube"
