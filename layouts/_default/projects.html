@@ -1,0 +1,117 @@
+{{- define "main" }}
+{{- $s := .Site.Params }}
+{{- $p := .Params }}
+{{ $about_info := .Site.Data.about.info }}
+
+<div class="{{ if ne $p.singleColumn true }}grid-inverse {{ end }}wrap content">
+  <div class="container">
+    <h1 class="section-title">Projects</h1>
+
+    <div class="projects-grid">
+      <div class="project-card" data-status="active">
+        <div class="project-link">↗</div>
+        <h3 class="project-title">
+          <span class="status-indicator"></span>
+          gubble
+        </h3>
+        <p class="project-description">
+          An open-source Go tool designed to audit Google Workspace group settings. It analyzes group membership
+          settings to identify security risks.
+        </p>
+        <div class="project-tags">
+          <span class="tag">Go</span>
+          <span class="tag">Security</span>
+          <span class="tag">Google Workspace</span>
+        </div>
+      </div>
+
+      <div class="project-card" data-status="active">
+        <div class="project-link">↗</div>
+        <h3 class="project-title">
+          <span class="status-indicator"></span>
+          USP
+        </h3>
+        <p class="project-description">
+          An open source Go tool to establish persistence on a Linux system by creating a udev rule that triggers the
+          execution of a specified payload.
+        </p>
+        <div class="project-tags">
+          <span class="tag">Go</span>
+          <span class="tag">Linux</span>
+          <span class="tag">Persistence</span>
+        </div>
+      </div>
+
+      <div class="project-card" data-status="active">
+        <div class="project-link">↗</div>
+        <h3 class="project-title">
+          <span class="status-indicator"></span>
+          MITRE ATTACK Contributor
+        </h3>
+        <p class="project-description">
+          Event Triggered Execution: Udev Rules
+        </p>
+        <div class="project-tags">
+          <span class="tag">MITRE</span>
+          <span class="tag">Research</span>
+          <span class="tag">Contribution</span>
+        </div>
+      </div>
+
+      <div class="project-card" data-status="active">
+        <div class="project-link">↗</div>
+        <h3 class="project-title">
+          <span class="status-indicator"></span>
+          Kubernomicon
+        </h3>
+        <p class="project-description">
+          An open source offensive security focused threat matrix for kubernetes with an emphasis on walking through how
+          to exploit each attack.
+        </p>
+        <div class="project-tags">
+          <span class="tag">Kubernetes</span>
+          <span class="tag">Security</span>
+          <span class="tag">Offensive</span>
+        </div>
+      </div>
+
+      <div class="project-card" data-status="active">
+        <div class="project-link">↗</div>
+        <h3 class="project-title">
+          <span class="status-indicator"></span>
+          Dredge
+        </h3>
+        <p class="project-description">
+          Dredge is a linux command-line tool for finding and logging secrets on a filesystem for manual inspection.
+        </p>
+        <div class="project-tags">
+          <span class="tag">Linux</span>
+          <span class="tag">Security</span>
+          <span class="tag">Secrets</span>
+        </div>
+      </div>
+
+      <div class="project-card" data-status="active">
+        <div class="project-link">↗</div>
+        <h3 class="project-title">
+          <span class="status-indicator"></span>
+          IMDSpoof
+        </h3>
+        <p class="project-description">
+          IMDSPOOF is a cyber deception tool that spoofs the AWS IMDS service to return HoneyTokens that can be alerted
+          on.
+        </p>
+        <div class="project-tags">
+          <span class="tag">AWS</span>
+          <span class="tag">Deception</span>
+          <span class="tag">HoneyTokens</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {{- if ( ne $p.sidebar false ) }}
+  {{- partial "sidebar" . }}
+  {{ end }}
+</div>
+{{- end }}

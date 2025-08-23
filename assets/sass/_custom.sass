@@ -10,7 +10,7 @@
 //     line-height: 1.6
 //     padding: 2rem
 
-// timeline styles
+// ---------------------------- TIMELINE ----------------------------
 .timeline
     max-width: 1000px
     margin: 0 auto
@@ -27,13 +27,14 @@
         background-color: #333
 
 .section-title
-    font-size: 1.6rem
-    font-weight: bold
+    font-size: 2rem
+    font-weight: 400
     color: #ffffff
-    text-transform: uppercase
+    margin-top: 2rem
+    text-transform: none
     letter-spacing: 2px
-    margin-bottom: 2rem
-    border-bottom: 1px solid #333
+    border-bottom: hidden
+    // border-bottom: 1px solid #333
     padding-bottom: 0.5rem
 
 .timeline-item
@@ -52,6 +53,7 @@
 
     &.current::before
         background-color: var(--theme)
+        animation: pulse 2s infinite
 
     &.past::before
         background-color: #666
@@ -115,3 +117,133 @@
 
     .job-item
         padding-left: 1.5rem
+
+// ---------------------------- PROJECT CARDS ----------------------------
+.container
+    max-width: 1200px
+    margin: 0 auto
+
+.projects-grid
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr))
+    gap: 1.5rem
+    margin-bottom: 2rem
+
+.project-card
+    background: #111111
+    border: 1px solid #222222
+    border-radius: 4px
+    padding: 1.5rem
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1)
+    cursor: pointer
+    position: relative
+    overflow: hidden
+
+    &::before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        background: linear-gradient(135deg, rgba(0, 255, 127, 0.05) 0%, rgba(0, 191, 255, 0.05) 100%)
+        opacity: 0
+        transition: opacity 0.3s ease
+        pointer-events: none
+
+    &:hover
+        border-color: #00ff7f
+        box-shadow: 0 8px 32px rgba(0, 255, 127, 0.1)
+        transform: translateY(-2px)
+
+    &:hover::before
+        opacity: 1
+
+.project-title
+    font-size: 1.2rem
+    font-weight: 600
+    color: #00ff7f
+    margin-bottom: 1rem
+    position: relative
+    z-index: 1
+
+.project-description
+    font-size: 0.9rem
+    color: #b0b0b0
+    line-height: 1.5
+    position: relative
+    z-index: 1
+
+.project-tags
+    margin-top: 1rem
+    display: flex
+    gap: 0.5rem
+    flex-wrap: wrap
+    position: relative
+    z-index: 1
+
+.tag
+    background: rgba(0, 255, 127, 0.1)
+    color: #00ff7f
+    padding: 0.25rem 0.5rem
+    border-radius: 2px
+    font-size: 0.75rem
+    border: 1px solid rgba(0, 255, 127, 0.3)
+
+.project-link
+    position: absolute
+    top: 1rem
+    right: 1rem
+    color: #666
+    font-size: 0.8rem
+    transition: color 0.3s ease
+    z-index: 1
+
+    .project-card:hover &
+        color: #00ff7f
+
+.status-indicator
+    display: inline-block
+    width: 8px
+    height: 8px
+    background: #00ff7f
+    border-radius: 50%
+    margin-right: 0.5rem
+    animation: pulse 2s infinite
+
+// @keyframes pulse
+//     0%  opacity: 1
+//     50%  opacity: 0.5
+//     100%  opacity: 1
+
+.status-maintenance
+    background: #ffaa00
+
+.status-archived
+    background: #666
+    animation: none
+
+@media (max-width: 768px)
+    .projects-grid
+        grid-template-columns: 1fr
+        gap: 1rem
+
+    .project-card
+        padding: 1rem
+
+    body
+        padding: 1rem
+
+/* Scrollbar styling */
+::-webkit-scrollbar
+    width: 8px
+
+::-webkit-scrollbar-track
+    background: #111
+
+::-webkit-scrollbar-thumb
+    background: #333
+    border-radius: 4px
+
+::-webkit-scrollbar-thumb:hover
+    background: #555
