@@ -1,69 +1,58 @@
-@font-face
-  font-family: 'Metropolis'
-  font-style: normal
-  font-weight: 200
-  src: local('Metropolis Extra Light'), local('Metropolis-Light'), url('#{$fontsPath}Metropolis-ExtraLight.woff2') format('woff2'), url('#{$fontsPath}Metropolis-ExtraLight.woff') format('woff')
-  font-display: swap
+// Terminal-optimized monospace font stack
+// Using system fonts first for better performance and consistency
 
 @font-face
-  font-family: 'Metropolis'
-  font-style: italic
-  font-weight: 200
-  src: local('Metropolis Extra Light Italic'), local('Metropolis-ExtraLightItalic'), url('#{$fontsPath}Metropolis-ExtraLightItalic.woff2') format('woff2'), url('#{$fontsPath}Metropolis-ExtraLightItalic.woff') format('woff')
-  font-display: swap
-
-@font-face
-  font-family: 'Metropolis'
+  font-family: 'Cascadia Code'
   font-style: normal
   font-weight: 300
-  src: local('Metropolis Light'), local('Metropolis-Light'), url('#{$fontsPath}Metropolis-Light.woff2') format('woff2'), url('#{$fontsPath}Metropolis-Light.woff') format('woff')
+  src: local('Cascadia Code Light'), local('CascadiaCode-Light'), url('#{$fontsPath}CascadiaCode-Light.woff2') format('woff2'), url('#{$fontsPath}CascadiaCode-Light.woff') format('woff')
   font-display: swap
 
 @font-face
-  font-family: 'Metropolis'
-  font-style: italic
+  font-family: 'Cascadia Code'
+  font-style: normal
+  font-weight: 400
+  src: local('Cascadia Code Regular'), local('CascadiaCode-Regular'), url('#{$fontsPath}CascadiaCode-Regular.woff2') format('woff2'), url('#{$fontsPath}CascadiaCode-Regular.woff') format('woff')
+  font-display: swap
+
+@font-face
+  font-family: 'Cascadia Code'
+  font-style: normal
+  font-weight: 500
+  src: local('Cascadia Code SemiBold'), local('CascadiaCode-SemiBold'), url('#{$fontsPath}CascadiaCode-SemiBold.woff2') format('woff2'), url('#{$fontsPath}CascadiaCode-SemiBold.woff') format('woff')
+  font-display: swap
+
+@font-face
+  font-family: 'Cascadia Code'
+  font-style: normal
+  font-weight: 600
+  src: local('Cascadia Code Bold'), local('CascadiaCode-Bold'), url('#{$fontsPath}CascadiaCode-Bold.woff2') format('woff2'), url('#{$fontsPath}CascadiaCode-Bold.woff') format('woff')
+  font-display: swap
+
+@font-face
+  font-family: 'Fira Code'
+  font-style: normal
   font-weight: 300
-  src: local('Metropolis Light Italic'), local('Metropolis-LightItalic'), url('#{$fontsPath}Metropolis-LightItalic.woff2') format('woff2'), url('#{$fontsPath}Metropolis-LightItalic.woff') format('woff')
+  src: local('Fira Code Light'), local('FiraCode-Light'), url('#{$fontsPath}FiraCode-Light.woff2') format('woff2'), url('#{$fontsPath}FiraCode-Light.woff') format('woff')
   font-display: swap
 
 @font-face
-  font-family: 'Metropolis'
+  font-family: 'Fira Code'
   font-style: normal
   font-weight: 400
-  src: local('Metropolis Regular'), local('Metropolis-Regular'), url('#{$fontsPath}Metropolis-Regular.woff2') format('woff2'), url('#{$fontsPath}Metropolis-Regular.woff') format('woff')
+  src: local('Fira Code Regular'), local('FiraCode-Regular'), url('#{$fontsPath}FiraCode-Regular.woff2') format('woff2'), url('#{$fontsPath}FiraCode-Regular.woff') format('woff')
   font-display: swap
 
 @font-face
-  font-family: 'Metropolis'
-  font-style: italic
-  font-weight: 400
-  src: local('Metropolis Regular Italic'), local('Metropolis-RegularItalic'), url('#{$fontsPath}Metropolis-RegularItalic.woff2') format('woff2'), url('#{$fontsPath}Metropolis-RegularItalic.woff') format('woff')
-  font-display: swap
-
-@font-face
-  font-family: 'Metropolis'
+  font-family: 'Fira Code'
   font-style: normal
   font-weight: 500
-  src: local('Metropolis Medium'), local('Metropolis-Medium'), url('#{$fontsPath}Metropolis-Medium.woff2') format('woff2'), url('#{$fontsPath}Metropolis-Medium.woff') format('woff')
+  src: local('Fira Code Medium'), local('FiraCode-Medium'), url('#{$fontsPath}FiraCode-Medium.woff2') format('woff2'), url('#{$fontsPath}FiraCode-Medium.woff') format('woff')
   font-display: swap
 
 @font-face
-  font-family: 'Metropolis'
-  font-style: italic
-  font-weight: 500
-  src: local('Metropolis Medium Italic'), local('Metropolis-MediumItalic'), url('#{$fontsPath}Metropolis-MediumItalic.woff2') format('woff2'), url('#{$fontsPath}Metropolis-MediumItalic.woff') format('woff')
-  font-display: swap
-
-@font-face
-  font-family: 'Metropolis'
+  font-family: 'Fira Code'
   font-style: normal
-  font-weight: 700
-  src: local('Metropolis Bold'), local('Metropolis-Bold'), url('#{$fontsPath}Metropolis-Bold.woff2') format('woff2'), url('#{$fontsPath}Metropolis-Bold.woff') format('woff')
-  font-display: swap
-
-@font-face
-  font-family: 'Metropolis'
-  font-style: italic
-  font-weight: 700
-  src: local('Metropolis Bold Italic'), local('Metropolis-BoldItalic'), url('#{$fontsPath}Metropolis-BoldItalic.woff2') format('woff2'), url('#{$fontsPath}Metropolis-BoldItalic.woff') format('woff')
+  font-weight: 600
+  src: local('Fira Code SemiBold'), local('FiraCode-SemiBold'), url('#{$fontsPath}FiraCode-SemiBold.woff2') format('woff2'), url('#{$fontsPath}FiraCode-SemiBold.woff') format('woff')
   font-display: swap

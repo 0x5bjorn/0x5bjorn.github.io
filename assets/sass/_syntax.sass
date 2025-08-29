@@ -1,23 +1,29 @@
 @keyframes pulse
   0%
     opacity: 1
-  75%
-    opacity: 0.1
+  50%
+    opacity: 0.3
   100%
     opacity: 1
 
 code
-  font-size: 85%
+  font-size: 0.9rem
   font-weight: 400
   overflow-y: hidden
   display: block
-  font-family: 'Monaco', monospace
+  font-family: 'Cascadia Code', 'Fira Code', 'JetBrains Mono', 'Source Code Pro', monospace
+  font-feature-settings: 'liga' 1, 'calt' 1
   word-break: break-all
   &.noClass
-    --inlineColor: rgb(194, 29, 0)
+    --inlineColor: #ff6b35
     color: var(--inlineColor)
     display: inline
     line-break: anywhere
+    background: rgba(255, 107, 53, 0.1)
+    padding: 0.1rem 0.3rem
+    border-radius: 2px
+    border: 1px solid rgba(255, 107, 53, 0.2)
+
 .windows .highlight
   overflow-x: hidden
   &:hover
@@ -26,18 +32,15 @@ code
 .highlight
   display: grid
   width: 100%
-  border-radius: 0 0.2rem 0.2rem 0
+  border-radius: 0
   overflow-x: auto
-  // @media screen and (min-width: 1240px)
-  //   overflow-x: hidden
-  //   &:hover
-  //     overflow-x: auto
   position: relative
   &_wrap
-    background: var(--code-bg) !important
-    border-radius: 0.5rem
+    background: #0d1117 !important
+    border: 1px solid #30363d
+    border-radius: 0
     position: relative
-    padding: 0 1rem
+    padding: 0
     margin: 1.5rem auto 1rem auto
     & + &
       margin-top: 2.25rem
@@ -45,27 +48,30 @@ code
       opacity: 1
     .lang
       position: absolute
-      // background-color: var(--bg)
+      background-color: #161b22
       top: 0
       right: 0
       text-align: right
-      width: 7.5rem
       padding: 0.5rem 1rem
-      font-style: italic
+      font-style: normal
       text-transform: uppercase
-      font-size: 67%
-      opacity: 0.5
-      color: var(--light)
+      font-size: 0.7rem
+      opacity: 0.7
+      color: #7d8590
+      font-family: var(--font)
+      border-bottom: 1px solid #30363d
+      border-left: 1px solid #30363d
     &:hover .lang
-      opacity: 0.1
+      opacity: 0.3
   & &
     margin: 0
   pre
-    color: var(--light) !important
-    border-radius: 4px
-    font-family: 'Monaco', monospace
-    padding-top: 1.5rem
-    padding-bottom: 2rem
+    color: #c9d1d9 !important
+    border-radius: 0
+    font-family: 'Cascadia Code', 'Fira Code', 'JetBrains Mono', monospace
+    padding: 1.5rem 1rem
+    font-feature-settings: 'liga' 1, 'calt' 1
+    background: #0d1117
 
   table
     display: grid
@@ -80,100 +86,106 @@ code
     border: none
     &:first-child
       &, pre
-        width: 2.5rem !important
-        padding-left: 0
-        padding-right: 0
-        color: rgba(255,255,255,0.5)
+        width: 3rem !important
+        padding-left: 1rem
+        padding-right: 0.5rem
+        color: #7d8590
         user-select: none
+        border-right: 1px solid #30363d
 
       pre
         width: 100%
         display: flex
         align-items: center
         flex-direction: column
+        background: #161b22
 
 .err
-  color: #a61717
-  background-color: #e3d2d2
+  color: #ff7b72
+  background-color: rgba(255, 123, 114, 0.1)
+
 .hl
   width: 100%
-  background-color: rgba(255,255,255,0.25)
+  background-color: rgba(255, 107, 53, 0.1)
+
 .ln, .lnt
   margin-right: 0.75rem
   padding: 0
   transition: opacity 0.3s var(--ease)
   &, span
-    color: hsla(0,0%,100%,0.5)
+    color: #7d8590
     user-select: none
 
-.k, .kc, .kd, .kn, .kp, .kr, .kt, .nt  
-  color: #6ab825
+// Terminal-inspired syntax highlighting
+.k, .kc, .kd, .kn, .kp, .kr, .kt, .nt
+  color: #ff7b72
   font-weight: 500
 
 .kn, .kp
   font-weight: 400
 
 .nb, .no, .nv
-  color: #24909d
+  color: #79c0ff
 
 .nc, .nf, .nn
-  color: #447fcf
+  color: #d2a8ff
 
 .s, .sa, .sb, .sc, .dl, .sd, .s2, .se, .sh, .si, .sx, .sr, .s1, .ss
-  color: #ed9d13
+  color: #a5d6ff
 
 .m, .mb, .mf, .mh, .mi, .il, .mo
-  color: #3677a9
+  color: #79c0ff
 
 .ow
-  color: #6ab825
+  color: #ff7b72
   font-weight: 500
 
 .c, .ch, .cm, .c1
-  color: #999
+  color: #7d8590
   font-style: italic
 
 .cs
-  color: #e50808
-  background-color: #520000
+  color: #ff6b35
+  background-color: rgba(255, 107, 53, 0.1)
   font-weight: 500
 
 .cp, .cpf
-  color: #cd2828
+  color: #ff6b35
   font-weight: 500
 
 .gd, .gr
-  color: #d22323
+  color: #ff7b72
 
 .ge
   font-style: italic
 
 .gh, .gu, .nd, .na, .ne
-  color: #ffa500
+  color: #f0883e
   font-weight: 500
 
 .gi
-  color: #589819
+  color: #56d364
 
 .go
-  color: #ccc
+  color: #c9d1d9
 
 .gp
-  color: #aaa
+  color: #7d8590
 
 .gs
   font-weight: 500
 
 .gt
-  color: #d22323
+  color: #ff7b72
+
 .w
-  color: #666
+  color: #6e7681
 
 .hljs
   &-string
-    color: #6ab825
+    color: #a5d6ff
   &-attr
-    color: #ed9d13
+    color: #f0883e
   .p &-attr
     color: var(--light)
 
@@ -188,52 +200,51 @@ code
   &_nolines.line .ln
     display: none
 
-// crayon-like widget styles
+// Terminal-style code panel
 .panel
   &_box
     display: inline-flex
-    // grid-template-columns: repeat(3, 1fr)
-    // max-width: 10rem
     perspective: 300px
     grid-gap: 0.5rem
     transition: opacity 0.3s var(--easing)
-    background: var(--code-bg)
-    padding: 0.5rem 1.5rem
-    border-radius: 2rem
+    background: #161b22
+    padding: 0.5rem 1rem
+    border: 1px solid #30363d
+    border-radius: 0
     align-items: center
     position: absolute
     right: 0rem
-    top: -2.5rem
+    top: -3rem
     opacity: 0
   &_icon
     display: inline-flex
     align-items: center
     justify-content: center
     cursor: pointer
-    // transition: opacity 0.3s var(--easing)
     padding: 0.1rem
     transform-origin: 50% 50%
-    // opacity: 0.7
     background-size: 100%
     background-repeat: no-repeat
     &.active
       animation: pulse 0.1s linear
     svg
-      fill: var(--light)
-      width: 1.5rem
-      height: 1.5rem
+      fill: #c9d1d9
+      width: 1.25rem
+      height: 1.25rem
+      &:hover
+        fill: #ff6b35
   &_hide
-    // hide icon if not needed
     display: none
   &_from
     position: absolute
-    color: var(--theme)
+    color: #ff6b35
     bottom: 0
-    font-size: 1.5rem
+    font-size: 1.25rem
     font-weight: 500
     padding: 0.5rem 0
     cursor: pointer
-    letter-spacing: 0.1px
+    letter-spacing: 0.05em
     z-index: 19
+    font-family: var(--font)
   &_expanded &_from
     display: none

@@ -1,15 +1,3 @@
-// *
-//     margin: 0
-//     padding: 0
-//     box-sizing: border-box
-
-// body
-//     background-color: #0a0a0a
-//     color: #e0e0e0
-//     font-family: 'Courier New', monospace
-//     line-height: 1.6
-//     padding: 2rem
-
 // ---------------------------- TIMELINE ----------------------------
 .timeline
     max-width: 1000px
@@ -24,18 +12,18 @@
         top: 4rem
         bottom: 0
         width: 2px
-        background-color: #333
+        background-color: var(--gray)
 
 .section-title
-    font-size: 2rem
-    font-weight: 400
-    color: #ffffff
+    font-size: 1.75rem
+    font-weight: 600
+    color: #f0f6fc
     margin-top: 2rem
     text-transform: none
-    letter-spacing: 2px
-    border-bottom: hidden
-    // border-bottom: 1px solid #333
+    letter-spacing: -0.025em
+    border-bottom: 1px solid var(--gray)
     padding-bottom: 0.5rem
+    font-family: var(--font)
 
 .timeline-item
     position: relative
@@ -45,51 +33,58 @@
     &::before
         content: ''
         position: absolute
-        left: -4px
-        top: 0.8rem
-        width: 10px
-        height: 10px
-        background-color: #444
+        left: -6px
+        top: 0.5rem
+        width: 14px
+        height: 14px
+        background-color: var(--gray)
+        border-radius: 50%
 
     &.current::before
-        background-color: var(--theme)
+        background-color: $theme
+        box-shadow: 0 0 8px rgba(255,107,53,0.6)
         animation: pulse 2s infinite
 
     &.past::before
-        background-color: #666
+        background-color: #6e7681
 
 .timeline-title
-    font-size: 1.4rem
-    color: #ffffff
+    font-size: 1.2rem
+    color: #f0f6fc
     margin-bottom: 0.25rem
-    font-weight: normal
+    font-weight: 500
+    font-family: var(--font)
 
 .timeline-status
-    font-size: 1.2rem
-    color: #888
+    font-size: 0.9rem
+    color: #7d8590
     margin-bottom: 1rem
-    text-transform: capitalize
+    text-transform: uppercase
+    font-family: var(--font)
+    letter-spacing: 0.05em
 
 .timeline-sub-title
-    font-size: 1rem
-    color: #b0b0b0
+    font-size: 0.95rem
+    color: #c9d1d9
     margin-bottom: 0.5rem
-    text-transform: capitalize
     font-style: italic
+    font-family: var(--font)
 
 .highlight
-    color: #4A9EFF
+    color: $theme
+    font-weight: 500
 
 // job styles
 .company
-    color: #4A9EFF
-    font-weight: bold
+    color: $theme
+    font-weight: 600
 
 .job-description
-    color: #b0b0b0
-    font-size: 1rem
-    line-height: 1.4
-    margin-left: 0.5rem
+    color: #c9d1d9
+    font-size: 0.9rem
+    line-height: 1.5
+    margin-left: 0
+    font-family: var(--font)
 
     & ul
         list-style: none
@@ -99,13 +94,14 @@
     & li
         position: relative
         padding-left: 1rem
-        margin-bottom: 0.25rem
+        margin-bottom: 0.5rem
 
     & li::before
-        content: '▪'
+        content: '▶'
         position: absolute
         left: 0
-        color: #666
+        color: $theme
+        font-size: 0.8rem
 
 /* Responsive Design */
 @media (max-width: 768px)
@@ -113,7 +109,7 @@
         padding: 1rem
 
     .section-title
-        font-size: 1rem
+        font-size: 1.5rem
 
     .job-item
         padding-left: 1.5rem
@@ -126,18 +122,19 @@
 .projects-grid
     display: grid
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr))
-    gap: 1.5rem
+    gap: 1rem
     margin-bottom: 2rem
 
 .project-card
-    background: #111111
-    border: 1px solid #222222
-    border-radius: 4px
-    padding: 1.5rem
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1)
+    background: var(--post-bg)
+    border: 1px solid var(--gray)
+    border-radius: 2px
+    padding: 1.25rem
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1)
     cursor: pointer
     position: relative
     overflow: hidden
+    font-family: var(--font)
 
     &::before
         content: ''
@@ -146,33 +143,35 @@
         left: 0
         right: 0
         bottom: 0
-        background: linear-gradient(135deg, rgba(0, 255, 127, 0.05) 0%, rgba(0, 191, 255, 0.05) 100%)
+        background: linear-gradient(135deg, rgba(255, 107, 53, 0.03) 0%, rgba(255, 140, 0, 0.03) 100%)
         opacity: 0
-        transition: opacity 0.3s ease
+        transition: opacity 0.2s ease
         pointer-events: none
 
     &:hover
-        border-color: #00ff7f
-        box-shadow: 0 8px 32px rgba(0, 255, 127, 0.1)
-        transform: translateY(-2px)
+        border-color: $theme
+        box-shadow: 0 4px 16px rgba(255, 107, 53, 0.15)
+        transform: translateY(-1px)
 
     &:hover::before
         opacity: 1
 
 .project-title
-    font-size: 1.2rem
+    font-size: 1.1rem
     font-weight: 600
-    color: #00ff7f
-    margin-bottom: 1rem
+    color: $theme
+    margin-bottom: 0.75rem
     position: relative
     z-index: 1
+    font-family: var(--font)
 
 .project-description
-    font-size: 0.9rem
-    color: #b0b0b0
-    line-height: 1.5
+    font-size: 0.85rem
+    color: #c9d1d9
+    line-height: 1.4
     position: relative
     z-index: 1
+    font-family: var(--font)
 
 .project-tags
     margin-top: 1rem
@@ -183,44 +182,43 @@
     z-index: 1
 
 .tag
-    background: rgba(0, 255, 127, 0.1)
-    color: #00ff7f
-    padding: 0.25rem 0.5rem
-    border-radius: 2px
-    font-size: 0.75rem
-    border: 1px solid rgba(0, 255, 127, 0.3)
+    background: rgba(255, 107, 53, 0.1)
+    color: $theme
+    padding: 0.2rem 0.5rem
+    border-radius: 1px
+    font-size: 0.7rem
+    border: 1px solid rgba(255, 107, 53, 0.3)
+    font-family: var(--font)
+    text-transform: uppercase
+    letter-spacing: 0.05em
 
 .project-link
     position: absolute
     top: 1rem
     right: 1rem
-    color: #666
-    font-size: 0.8rem
-    transition: color 0.3s ease
+    color: #7d8590
+    font-size: 0.75rem
+    transition: color 0.2s ease
     z-index: 1
+    font-family: var(--font)
 
     .project-card:hover &
-        color: #00ff7f
+        color: $theme
 
 .status-indicator
     display: inline-block
-    width: 8px
-    height: 8px
-    background: #00ff7f
+    width: 6px
+    height: 6px
+    background: $theme
     border-radius: 50%
     margin-right: 0.5rem
     animation: pulse 2s infinite
 
-// @keyframes pulse
-//     0%  opacity: 1
-//     50%  opacity: 0.5
-//     100%  opacity: 1
-
 .status-maintenance
-    background: #ffaa00
+    background: #f0883e
 
 .status-archived
-    background: #666
+    background: #7d8590
     animation: none
 
 @media (max-width: 768px)
@@ -234,16 +232,16 @@
     body
         padding: 1rem
 
-/* Scrollbar styling */
+/* Scrollbar styling - terminal aesthetic */
 ::-webkit-scrollbar
-    width: 8px
+    width: 6px
 
 ::-webkit-scrollbar-track
-    background: #111
+    background: #0d1117
 
 ::-webkit-scrollbar-thumb
-    background: #333
-    border-radius: 4px
+    background: var(--gray)
+    border-radius: 0
 
 ::-webkit-scrollbar-thumb:hover
-    background: #555
+    background: $theme

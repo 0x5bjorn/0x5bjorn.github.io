@@ -29,7 +29,6 @@
     <div class="post_body">
       {{- .Content }}
     </div>
-    <hr>
 
     <div class="timeline">
       <h1 class="section-title">Job Experience</h1>
@@ -37,7 +36,7 @@
       <div class="timeline-item {{ if .current }} current {{ end }}">
         <div class="timeline-title"> {{ .title }} @ <a class="company" href="{{ .link }}"> {{ .company }} </a></div>
         <div class="timeline-status"> {{ .duration }} </div>
-        <div class="timeline-sub-title"> {{ .techStack }} </div>
+        <div class="timeline-sub-title"> Tech stack: {{ .techStack }} </div>
         <div class="job-description">
           <ul>
             {{ range .description }}
@@ -48,7 +47,6 @@
       </div>
       {{ end }}
     </div>
-    <hr>
 
     <div class="timeline">
       <h1 class="section-title">Education</h1>

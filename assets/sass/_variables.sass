@@ -1,9 +1,8 @@
-$light: #fff
-$haze: #fafafa
-$xhaze: darken($haze, 11%)
-// $bg: #0a0a0a
-$bg: #002538
-$theme: #0077b8
+$light: #f0f0f0
+$haze: #1a1a1a
+$xhaze: lighten($haze, 8%)
+$bg: #0d1117
+$theme: #f16330
 $mobile-menu-breakpoint: 769px
 $single-column-breakpoint: 42rem
 
@@ -19,78 +18,78 @@ $single-column-breakpoint: 42rem
   @content
 
 @mixin shadow($opacity: 0.17)
-  box-shadow: 0 0 3rem rgba(0,0,0,$opacity)
+  box-shadow: 0 0 3rem rgba(255,107,53,$opacity)
   &:hover
-    box-shadow: 0 0 5rem rgba(0,0,0, (1.5 * $opacity))
+    box-shadow: 0 0 5rem rgba(255,107,53, (1.5 * $opacity))
 
 html
-  --color-mode: 'lit'
-  --light: #fff
-  --dark: #000
-  // --bg: #0a0a0a
-  --bg: #002538
-  --haze: #f2f2f2
-  --gray: #020202
-  --accent: var(--gray)
-  --text: #575757
-  --text-hover: var(--gray)
-  --header-text: var(--dark)
-  --font: Metropolis, sans-serif
-  --theme: #0077b8
+  --color-mode: 'dim'
+  --light: #f0f0f0
+  --dark: #0d1117
+  --bg: #0d1117
+  --haze: #1a1a1a
+  --gray: #21262d
+  --accent: #ff6b35
+  --text: #c9d1d9
+  --text-hover: #f0f6fc
+  --header-text: #f0f6fc
+  --font: 'Cascadia Code', 'Fira Code', 'JetBrains Mono', 'Source Code Pro', 'Consolas', monospace
+  --theme: #ff6b35
   --ease: cubic-bezier(.19,1,.22,1)
-  --code-bg: var(--bg)
-  --table-bg: var(--light)
-  --table-haze: var(--haze)
-  --table-border: #dedede
-  --footer-bg: var(--haze)
-  --shadow: rgba(0,0,0,0.12)
-  --translucent: rgba(0,0,0,0.05)
+  --code-bg: #161b22
+  --table-bg: #21262d
+  --table-haze: #161b22
+  --table-border: #30363d
+  --footer-bg: #0d1117
+  --shadow: rgba(255,107,53,0.12)
+  --translucent: rgba(255,107,53,0.05)
   --translucent-light: rgba(255,255,255,0.05)
-  --post-bg: var(--light)
-  --choice-bg: var(--haze)
+  --post-bg: #161b22
+  --choice-bg: #0d1117
   --ease: cubic-bezier(0.39, 0.575, 0.565, 1)
   --easing: cubic-bezier(.19,1,.22,1)
-  --notice-code-bg: #0D3042
-  --notice-info-border-color: #6AB0DE
-  --notice-info-background: #E7F2FA
-  --notice-note-border-color: #F0B37E
-  --notice-note-background: #FFF2DB
-  --notice-tip-border-color: rgba(92, 184, 92, 0.8)
-  --notice-tip-background: #E6F9E6
-  --notice-warning-border-color: rgba(217, 83, 79, 0.8)
-  --notice-warning-background: #FAE2E2
+  --notice-code-bg: #161b22
+  --notice-info-border-color: #58a6ff
+  --notice-info-background: #0d2d4a
+  --notice-note-border-color: #f0b37e
+  --notice-note-background: #2d1f0d
+  --notice-tip-border-color: #56d364
+  --notice-tip-background: #0d2818
+  --notice-warning-border-color: #ff7b72
+  --notice-warning-background: #2d0d0d
 
   &.page
-    --choice-bg: var(--light)
+    --choice-bg: #161b22
   @mixin darkmode
-    --light: hsla(0,0%,100%,0.87)
+    --light: #f0f6fc
     --color-mode: 'dim'
-    --text: var(--light)
-    --text-hover: var(--haze)
-    --accent: var(--bubble)
-    --choice-bg: var(--bg)
-    --code-bg: var(--translucent-light)
-    --header-text: var(--light)
-    --table-bg: var(--code-bg)
-    --table-haze: rgba(255,255,255,0.1)
-    --table-border: var(--code-bg)
-    --footer-bg: var(--bg)
-    --post-bg: var(--translucent-light)
+    --text: #c9d1d9
+    --text-hover: #f0f6fc
+    --accent: #ff6b35
+    --choice-bg: #0d1117
+    --code-bg: #161b22
+    --header-text: #f0f6fc
+    --table-bg: #21262d
+    --table-haze: #161b22
+    --table-border: #30363d
+    --footer-bg: #0d1117
+    --post-bg: #161b22
     *
-      // box-shadow: none !important
+      // Terminal aesthetic - minimal shadows
 
   &[data-mode="dim"]
     @include darkmode
     blockquote
-      background: var(--translucent-light)
-      color: #dedede
+      background: #161b22
+      color: #c9d1d9
+      border-left-color: #ff6b35
     svg.icon
-      fill: var(--light)
+      fill: #c9d1d9
     .icon
       img
         background: none
       svg
-        fill: #fafafa
+        fill: #c9d1d9
     .sidebar
       &_inner
         &::before
@@ -98,7 +97,7 @@ html
     .color
       &_choice
         &::after
-          background-image: url("#{$imagesPath}night-moon.jpg")
+          background: #ff6b35
           transform: translateX(1.4rem)
 
   @media (prefers-color-scheme: dark)
@@ -106,15 +105,16 @@ html
     &:not([data-mode="lit"])
       @include darkmode
       blockquote
-        background: var(--translucent-light)
-        color: #dedede
+        background: #161b22
+        color: #c9d1d9
+        border-left-color: #ff6b35
       svg.icon
-        fill: var(--light)
+        fill: #c9d1d9
       .icon
         img
           background: none
         svg
-          fill: #fafafa 
+          fill: #c9d1d9
       .sidebar
         &_inner
           &::before
@@ -122,5 +122,5 @@ html
       .color
         &_choice
           &::after
-            background-image: url("#{$imagesPath}night-moon.jpg")
+            background: #ff6b35
             transform: translateX(1.4rem)

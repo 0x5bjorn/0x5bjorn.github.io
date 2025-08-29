@@ -6,7 +6,7 @@
   top: -0.5rem
   left: 1rem
 .nav
-  color: $haze
+  color: $theme
   display: flex
   justify-content: space-between
   @include content
@@ -31,9 +31,13 @@
     left: 0
     border-bottom: 1px solid var(--haze)
   &_item
-    padding: 0.5rem 1rem
+    padding: 0.5rem
     display: inline-flex
     align-items: center
+    &:hover
+      background-color: rgba($light, 0.05)
+      border-radius: 0.25rem
+
   &_sub
     width: 100%
     left: 0
@@ -51,7 +55,7 @@
     position: relative
     display: flex
     align-items: center
-    margin: 0.25rem 0
+    margin: 1rem 0
     border-radius: 0.5rem
 
   &_open + &_sub &_child
@@ -117,7 +121,7 @@
       max-width: 15rem
       margin: 0
     @media screen and (min-width: $mobile-menu-breakpoint)
-      padding-left: 0
+      // padding-left: 0
       // margin-left: -16rem
       // transform: translateX(50rem)
       img
@@ -230,13 +234,28 @@
   &_item
     // box-shadow: 0  2.25rem 1.25rem -1.25rem var(--shadow)
     margin-bottom: 2rem
-    border-radius: 0.5rem
+    // border-radius: 0.5rem
     background: var(--post-bg)
-    border: 1px solid var(--post-bg)
+    border: 1px solid var(--gray)
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1)
+    cursor: pointer
+    &::before
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      background: linear-gradient(135deg, rgba(255, 107, 53, 0.03) 0%, rgba(255, 140, 0, 0.03) 100%)
+      opacity: 0
+      transition: opacity 0.2s ease
+      pointer-events: none
     &:hover
-      border-color: var(--light)
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4)
-      transform: translateY(-3px)
+      border-color: var(--theme)
+      transform: translateY(-1px)
+    &:hover::before
+      opacity: 1
+
   &_tag
     padding: 0.2rem 0.8rem
     font-size: 0.8rem
@@ -290,6 +309,8 @@
   &_content
     a:not(.button)
       color: $theme
+      &:hover
+        text-decoration: underline
     ul, ol
       list-style: initial
       padding: 0.5rem 1.25rem
@@ -710,8 +731,8 @@ figcaption
     width: 100%
     outline: none
     color: var(--text)
-    background: var(--post-bg)
-    border: 1px solid var(--border)
+    background: var(--bg)
+    border: 1px solid var(--gray)
     border-radius: 8px
     font-size: 1rem
     box-shadow: 0 0.25rem 1rem rgba(0,0,0,0.1)
@@ -753,7 +774,7 @@ figcaption
         display: none
   &_title
     padding: 0.25rem 1rem !important
-    background-color: $theme
+    background-color: darken($theme, 20%)
     color: var(--light)
     margin: 0
     font-size: 1.25rem
