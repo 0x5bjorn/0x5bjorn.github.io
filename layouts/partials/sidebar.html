@@ -19,10 +19,10 @@
       {{- if $showAuthorPhoto }}
         <div class="author_header">
           <img src="{{ absURL $author.photo }}" alt="{{ $author.name }} photo">
-          <h2>{{  $author.name }}</h2>
+          <h1>{{  $author.name }}</h1>
         </div>
       {{- else }}
-        <h2>{{  if $fullAuthor }}{{ $author.name }}{{ else }}{{ $author }}{{ end }}</h2>
+        <h1>{{  if $fullAuthor }}{{ $author.name }}{{ else }}{{ $author }}{{ end }}</h1>
       {{- end }}
       <div class="author_bio">
         {{ markdownify $introDescription }}
