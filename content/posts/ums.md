@@ -20,7 +20,7 @@ The main components of the UMS mechanism in this implementation are:
  - *completion list*, the list of worker threads to be associated with scheduler
 
 The execution flow is shown below: 
-![exec flow](images/ums/execution_flow.jpg)
+![exec flow](images/posts-media/ums/execution_flow.jpg)
 
 As shown in the flow, in order to begin utilization of UMS mechanism the application in user space needs to initialize it by `init_ums()`. It makes IOCTL call to invoke `init_ums_process()` which creates necessary structures associated with the application in kernel space.
 After that, UMS mechanism is enabled for this application and user can create completion lists and worker threads. This is done with the help of `create_completion_list()` and `create_worker_thread()`. Worker threads are built with *task routine* and required parameters, and completion lists are filled with worker threads by `add_worker_thread()` manually.
@@ -38,11 +38,11 @@ The implementation was built on the following environment:
 - Architecture: x86-64
 
 The log information examples of the library and module are shown the following pictures:
-![library log](images/ums/lib_log_info.png)
+![library log](images/posts-media/ums/lib_log_info.png)
 
-![module log1](images/ums/module_log_info.png)
+![module log1](images/posts-media/ums/module_log_info.png)
 
-![module log2](images/ums/module_log_info_2.png)
+![module log2](images/posts-media/ums/module_log_info_2.png)
 
 The measured benchmark sample of the project is the average time needed for a scheduler thread to switch a worker thread which is in range between 150-250 ms. 
 

@@ -1,7 +1,7 @@
 # --- WORK EXPERIENCE
 [[info.work]]
 link = "https://www.optimabank.kg/index.php?option=com_content&view=article&id=621&lang=en&Itemid=266"
-logo = "images/experience/ob_logo.jpg"
+# logo = "images/experience/ob_logo.jpg"
 company = "OJSC Optima Bank"
 duration = "March 2025 - Present"
 title = "DevOps & Software Engineer"
@@ -18,7 +18,7 @@ techStack = "Docker Swarm, Gitlab CI/CD, Nginx, Grafana, Java, Keycloak, Softwar
 
 [[info.work]]
 link = "https://o.kg/"
-logo = "images/experience/o_mob.jpg"
+# logo = "images/experience/o_mob.jpg"
 company = "O! Mobile Operator"
 duration = "January 2025 - February 2025 (2 mth.)"
 title = "Software Developer"
@@ -29,7 +29,7 @@ techStack = "Java, Spring Framework, Apache Karaf, Oracle"
 
 [[info.work]]
 link = "https://www.optimabank.kg/index.php?option=com_content&view=article&id=621&lang=en&Itemid=266"
-logo = "images/experience/ob_logo.jpg"
+# logo = "images/experience/ob_logo.jpg"
 company = "OJSC Optima Bank"
 duration = "September 2022 - December 2024 (2 y. 4 mth.)"
 title = "Back End Developer"
@@ -52,7 +52,7 @@ techStack = "Microservices, Java, Spring Boot, PostgreSQL, GraphQL, RabbitMQ, RE
 
 [[info.work]]
 link = "https://financesoft.kg/?lang=en"
-logo = "images/experience/fs_logo.png"
+# logo = "images/experience/fs_logo.png"
 company = "FinanceSoft"
 duration = "May 2022 - July 2022 (3 mth.)"
 title = "Full Stack Developer"
@@ -69,7 +69,7 @@ techStack = "C#, .NET Core, Typescript, Angular, MSSQL, Transact-SQL"
 
 [[info.work]]
 link = "https://naskr.gov.kg/en/"
-logo = "images/experience/naskr_logo.png"
+# logo = "images/experience/naskr_logo.png"
 company = "National Academy of Sciences of Kyrgyzstan"
 duration = "December 2019 - May 2020 (6 mth.)"
 title = "Engineer in Institute of Automatics and IT"
@@ -89,7 +89,7 @@ techStack = "C/C++ with Arduino, Mosquitto, Telegraf, InfluxDB, Docker"
 [[info.education]]
 link = "https://www.uniroma1.it/en/pagina-strutturale/home"
 academy = "Sapienza University of Rome"
-logo = "/images/education/sapienza_logo.png"
+# logo = "/images/education/sapienza_logo.png"
 title = "MS in Engineering in Computer Science"
 current = false
 year = "2020 - 2022 (Not Completed)"
@@ -97,7 +97,7 @@ year = "2020 - 2022 (Not Completed)"
 [[info.education]]
 link = "https://www.auca.kg/"
 academy = "American University of Central Asia"
-logo = "/images/education/auca_logo.jpeg"
+# logo = "/images/education/auca_logo.jpeg"
 title = "BA in Software Engineering"
 current = false
 year = "2016 - 2020"
