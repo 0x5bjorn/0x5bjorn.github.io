@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>About on Sultan (0x5bjorn)</title><link>https://0x5bjorn.github.io/</link><description>Recent content in About on Sultan (0x5bjorn)</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 15 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://0x5bjorn.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>DLL injector</title><link>https://0x5bjorn.github.io/posts/dll-inj/</link><pubDate>Fri, 15 Sep 2023 00:00:00 +0000</pubDate><guid>https://0x5bjorn.github.io/posts/dll-inj/</guid><description>
+&lt;p>Who is &lt;a href="https://0x13hrafnulf.github.io/">0x13hrafnulf&lt;/a>?&lt;/p>
+&lt;h1 id="simple-dll-injector-with-gui-dll-inj">Simple DLL injector with GUI (dll-inj)&lt;/h1>
+&lt;p>&lt;em>in development&lt;/em> &lt;strong>&lt;a href="https://github.com/0x5bjorn/dll-inj">repository&lt;/a>&lt;/strong>&lt;/p>
+&lt;p>Simple DLL injector with GUI written in C++ for educational purposes only&lt;/p>
+&lt;h2 id="demo">Demo&lt;/h2>
+&lt;p>&lt;figure>
+&lt;picture>
+&lt;img
+loading="lazy"
+decoding="async"
+alt="demo"
+class="image_figure image_internal image_unprocessed"
+src="https://0x5bjorn.github.io/images/dll-inj/demo.gif"
+/>
+&lt;/picture>
+&lt;/figure>
+&lt;/p>
+&lt;h2 id="code-organization">Code organization&lt;/h2>
+&lt;ul>
+&lt;li>&lt;strong>GUI&lt;/strong> - GUI management using &lt;a href="https://github.com/ocornut/imgui">&lt;strong>Dear ImGui&lt;/strong>&lt;/a>&lt;/li>
+&lt;li>&lt;strong>Injection&lt;/strong> - DLL injection implemention using Windows API&lt;/li>
+&lt;li>&lt;strong>OpenDialogBox&lt;/strong> - file selection dialog box using Windows API&lt;/li>
+&lt;li>&lt;strong>Proc&lt;/strong> - process and process modules querying handler&lt;/li>
+&lt;li>&lt;strong>Application&lt;/strong> - application and app window management&lt;/li>
+&lt;/ul>
+&lt;h2 id="description">Description&lt;/h2>
+&lt;p>&lt;em>Coming soon...&lt;/em>&lt;/p></description></item><item><title>UMS</title><link>https://0x5bjorn.github.io/posts/ums/</link><pubDate>Mon, 03 Jul 2023 00:00:00 +0000</pubDate><guid>https://0x5bjorn.github.io/posts/ums/</guid><description>
+&lt;h1 id="aosv-final-project-report">AOSV Final Project Report&lt;/h1>
+&lt;p>&lt;em>A.Y. 2020/2021&lt;/em>&lt;br>
+&lt;strong>&lt;a href="https://github.com/0x5bjorn/AOSV-project">repository&lt;/a>&lt;/strong>&lt;/p>
+&lt;!-- Author(s): Sultan Umabraev (1954544) -->
+&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>The goal of the project was to implement &lt;strong>User Mode thread Scheduling&lt;/strong> mechanism for the Linux distribution, inspired by the &lt;strong>User-mode scheduling (UMS)&lt;/strong> implementation available in the Windows kernel [1]. UMS is a mechanism that allows applications/programs in the user mode to schedule their own threads without involving the kernel/system scheduler. The main goal and advantage is that thread switching in user mode is &amp;quot;&lt;em>more efficient than thread pools for managing large numbers of short-duration work items that require few system calls.&lt;/em>&amp;quot; [2].&lt;/p></description></item></channel></rss>
