@@ -1,9 +1,6 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>0x13hrafnulf's Challenges on Sultan (0x5bjorn)</title><link>https://0x5bjorn.github.io/series/0x13hrafnulfs-challenges/</link><description>Recent content in 0x13hrafnulf's Challenges on Sultan (0x5bjorn)</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 15 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://0x5bjorn.github.io/series/0x13hrafnulfs-challenges/index.xml" rel="self" type="application/rss+xml"/><item><title>DLL injector</title><link>https://0x5bjorn.github.io/posts/dll-inj/</link><pubDate>Fri, 15 Sep 2023 00:00:00 +0000</pubDate><guid>https://0x5bjorn.github.io/posts/dll-inj/</guid><description>
-&lt;p>Who is &lt;a href="https://0x13hrafnulf.github.io/">0x13hrafnulf&lt;/a>?&lt;/p>
-&lt;h1 id="simple-dll-injector-with-gui-dll-inj">Simple DLL injector with GUI (dll-inj)&lt;/h1>
-&lt;p>&lt;em>in development&lt;/em> &lt;strong>&lt;a href="https://github.com/0x5bjorn/dll-inj">repository&lt;/a>&lt;/strong>&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>0x13hrafnulf's Challenges on Sultan (0x5bjorn)</title><link>https://0x5bjorn.github.io/series/0x13hrafnulfs-challenges/</link><description>Recent content in 0x13hrafnulf's Challenges on Sultan (0x5bjorn)</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 15 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://0x5bjorn.github.io/series/0x13hrafnulfs-challenges/index.xml" rel="self" type="application/rss+xml"/><item><title>Simple DLL injector with GUI (dll-inj)</title><link>https://0x5bjorn.github.io/posts/dll-inj/</link><pubDate>Fri, 15 Sep 2023 00:00:00 +0000</pubDate><guid>https://0x5bjorn.github.io/posts/dll-inj/</guid><description>
 &lt;p>Simple DLL injector with GUI written in C++ for educational purposes only&lt;/p>
-&lt;h2 id="demo">Demo&lt;/h2>
+&lt;p>&lt;em>in development&lt;/em> &lt;a href="https://github.com/0x5bjorn/dll-inj">repository&lt;/a>&lt;/p>
 &lt;p>&lt;figure>
 &lt;picture>
 &lt;img
@@ -18,11 +15,11 @@ src="https://0x5bjorn.github.io/images/posts-media/dll-inj/demo.gif"
 &lt;/p>
 &lt;h2 id="code-organization">Code organization&lt;/h2>
 &lt;ul>
-&lt;li>&lt;strong>GUI&lt;/strong> - GUI management using &lt;a href="https://github.com/ocornut/imgui">&lt;strong>Dear ImGui&lt;/strong>&lt;/a>&lt;/li>
-&lt;li>&lt;strong>Injection&lt;/strong> - DLL injection implemention using Windows API&lt;/li>
-&lt;li>&lt;strong>OpenDialogBox&lt;/strong> - file selection dialog box using Windows API&lt;/li>
-&lt;li>&lt;strong>Proc&lt;/strong> - process and process modules querying handler&lt;/li>
 &lt;li>&lt;strong>Application&lt;/strong> - application and app window management&lt;/li>
+&lt;li>&lt;strong>Injection&lt;/strong> - DLL injection implemention using Windows API&lt;/li>
+&lt;li>&lt;strong>Proc&lt;/strong> - process and process modules querying handler&lt;/li>
+&lt;li>&lt;strong>GUI&lt;/strong> - GUI management using &lt;a href="https://github.com/ocornut/imgui">Dear ImGui&lt;/a>&lt;/li>
+&lt;li>&lt;strong>OpenDialogBox&lt;/strong> - file selection dialog box using Windows API&lt;/li>
 &lt;/ul>
-&lt;h2 id="description">Description&lt;/h2>
-&lt;p>&lt;em>Coming soon...&lt;/em>&lt;/p></description></item></channel></rss>
+&lt;h2 id="dll-injection">DLL injection&lt;/h2>
+&lt;p>One of the most known &lt;em>code injection&lt;/em> techniques in Windows environments is &lt;strong>Dynamic Link Library (DLL) injection&lt;/strong>. The core idea is to execute arbitrary external code in the context of running processes. This can be done by misusing legitimate Windows API functionality and its designed features. Injection is used for the following list of malicious operations:&lt;/p></description></item></channel></rss>
