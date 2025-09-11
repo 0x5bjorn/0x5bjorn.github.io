@@ -5,7 +5,7 @@ github: ["https://github.com/0x5bjorn/AOSV-project"]
 tags: ["academic"]
 ---
 
-# AOSV Final Project Report
+## AOSV Final Project Report
 _A.Y. 2020/2021_  
 **[repository](https://github.com/0x5bjorn/AOSV-project)**
 <!-- Author(s): Sultan Umabraev (1954544)  -->
