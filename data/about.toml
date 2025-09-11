@@ -3,35 +3,37 @@
 link = "https://www.optimabank.kg/index.php?option=com_content&view=article&id=621&lang=en&Itemid=266"
 # logo = "images/experience/ob_logo.jpg"
 company = "OJSC Optima Bank"
-duration = "March 2025 - Present"
+duration = "February 2025 - Present"
 title = "DevOps & Software Engineer"
 current = true
-techStack = "Docker Swarm, Gitlab CI/CD, Nginx, Grafana, Java, Keycloak, Software Observability"
+techStack = "Docker Swarm, Gitlab CI/CD, Nginx, Java, Spring Boot, Keycloak, Consul, Vault, Grafana, Loki, Promtail"
     [[info.work.description]]
     point = "Docker Swarm cluster management and maintenance"
     [[info.work.description]]
-    point = "Gitlab CI/CD automation and configuration"
+    point = "Gitlab CI/CD configuration global refactoring"
     [[info.work.description]]
-    point = "Nginx configuration and maintenance"
+    point = "Nginx, Consul, Vault, Grafana, Loki, Promtail configuration and maintenance"
     [[info.work.description]]
     point = "Keycloak custom plugin development"
+    [[info.work.description]]
+    point = "Internal service development and maintenance (client certs service, config service)"
 
-[[info.work]]
-link = "https://o.kg/"
-# logo = "images/experience/o_mob.jpg"
-company = "O! Mobile Operator"
-duration = "January 2025 - February 2025 (2 mth.)"
-title = "Software Developer"
-current = false
-techStack = "Java, Spring Framework, Apache Karaf, Oracle"
-    # [[info.work.description]]
-    # point = ""
+# [[info.work]]
+# link = "https://o.kg/"
+# # logo = "images/experience/o_mob.jpg"
+# company = "O! Mobile Operator"
+# duration = "January 2025 - February 2025 (2 mth.)"
+# title = "Software Developer"
+# current = false
+# techStack = "Java, Spring Framework, Apache Karaf, Oracle"
+#     # [[info.work.description]]
+#     # point = ""
 
 [[info.work]]
 link = "https://www.optimabank.kg/index.php?option=com_content&view=article&id=621&lang=en&Itemid=266"
 # logo = "images/experience/ob_logo.jpg"
 company = "OJSC Optima Bank"
-duration = "September 2022 - December 2024 (2 y. 4 mth.)"
+duration = "September 2022 - January 2024 (2 y. 5 mth.)"
 title = "Back End Developer"
 current = false
 techStack = "Microservices, Java, Spring Boot, PostgreSQL, GraphQL, RabbitMQ, REST APIs, Docker, Gitlab CI/CD, Grafana, Redis"
