@@ -6,7 +6,7 @@ company = "OJSC Optima Bank"
 duration = "February 2025 - Present"
 title = "DevOps & Software Engineer"
 current = true
-techStack = "Docker Swarm, Gitlab CI/CD, Nginx, Java, Spring Boot, Keycloak, Consul, Vault, Grafana, Loki, Promtail"
+techStack = "Docker Swarm, Gitlab CI/CD, Nginx, Java, Spring Boot, Golang, Grafana, Keycloak, Consul, Vault, Loki, Promtail"
     [[info.work.description]]
     point = "Docker Swarm cluster management and maintenance"
     [[info.work.description]]
