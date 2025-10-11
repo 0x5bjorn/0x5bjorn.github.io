@@ -44,7 +44,8 @@ a
 h1,h2,h3,h4,h5
   font-family: inherit
   font-weight: 500
-  padding: 0.25rem 0
+  padding: 0.5rem 0
+  padding-top: 0rem
   margin: 1rem 0 0.5rem 0
   color: var(--header-text)
   line-height: 1.2
@@ -175,12 +176,21 @@ blockquote
   + .highlight_wrap
     margin-top: 2.25rem
   &::before
-    content: '>'
+    content: ''
     color: var(--theme)
     font-weight: bold
     position: absolute
     left: 0.5rem
     top: 1rem
+  &_meta
+    display: none !important
+  .page &_meta
+    @extend blockquote
+    display: initial !important
+    align-items: flex-end
+    text-align: right
+    margin-left: auto
+
 p
   padding: 0.5rem 0
   &:empty

@@ -172,7 +172,7 @@
   padding: 0.5rem 1.5rem
   text-transform: uppercase
   border: 1px solid $theme
-  border-radius: 1.5rem
+  border-radius: 0.25rem
   font-size: 0.9rem
   align-items: center
   user-select: none
@@ -197,8 +197,8 @@
     color: $theme
     border: 1px solid transparent
   &_tally
-    padding: 0 0.75rem
-    border-radius: 0.5rem
+    padding: 0 0.5rem
+    border-radius: 1rem
     background-color: $theme
     display: inline-flex
     justify-content: center
@@ -214,7 +214,9 @@
     line-height: 1
     > a
       display: block
+      color: $theme
       line-height: 1.35
+      font-weight: bold
   &s
     margin-top: 2rem
   &_header
@@ -258,8 +260,7 @@
       opacity: 1
 
   &_tag
-    padding: 0.2rem 0.8rem
-    font-size: 0.8rem
+    @extend .tag
     &s
       display: none
       &.jswidgetopen
@@ -281,7 +282,9 @@
         cursor: pointer
   &_tag, &_share
     margin: 0.5rem
-  &_share
+    margin-left: 0rem
+    margin-right: 0rem
+  &_share, &_time
     display: inline-flex
   &_meta
     font-size: 1rem
@@ -291,7 +294,6 @@
       flex-flow: row wrap
     span
       align-items: center
-      margin-bottom: 0.5rem
       @media screen and (min-width: 557px)
         gap: 0.5rem 0
       &:last-of-type
@@ -300,13 +302,6 @@
     .button
       @media screen and (min-width: 667px)
         margin: 0 0.5rem
-  &_meta2
-    display: none !important
-  .page &_meta2
-    display: initial !important
-    align-items: flex-end
-    text-align: right
-    margin-left: auto
 
   &_date
     margin-right: 0.5rem
@@ -481,6 +476,7 @@
 .excerpt
   &_header, &_footer
     padding: 1rem
+    padding-top: 0rem
   &_footer
     padding: 0 1rem 2.25rem 1rem
   &_thumbnail
@@ -584,7 +580,7 @@ figcaption
     justify-content: center
     align-items: center
     cursor: pointer
-    border-radius: 50%
+    border-radius: 0%
     position: fixed
     bottom: 1.5rem
     right: 1.5rem

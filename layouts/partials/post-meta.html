@@ -22,13 +22,20 @@
   </span>
   {{- $scratch.Set "writeSeparator" true }}
   {{- end }}
+
   {{- if $showReadTime }}
-  <span class="post_time">{{ if ($scratch.Get "writeSeparator") }} · {{ end }}{{ T "reading_time" . }}</span>
+  <span class="post_time">{{ if ($scratch.Get "writeSeparator") }} | {{ end }}{{ T "reading_time" . }}</span>
   {{- $scratch.Set "writeSeparator" true }}
   {{- end }}
+
+  {{- if $showShare }}
+  <span class="page_only">{{ if ($scratch.Get "writeSeparator") }}&nbsp;|{{ end }}{{ partial "share" . }}</span>
+  {{- $scratch.Set "writeSeparator" true }}
+  {{- end }}
+
   {{- with .Params.tags -}}
   <span>
-    {{- if ($scratch.Get "writeSeparator") }}&nbsp;· {{ end }}
+    {{- if ($scratch.Get "writeSeparator") }}&nbsp;|{{ end }}
     {{- range . }}
     {{- $tag := . -}}
     <a href='{{ absLangURL (printf "tags") }}/{{ replace $tag "#" "%23" | urlize }}/' title="{{ . }}"
@@ -39,19 +46,17 @@
   </span>
   {{- $scratch.Set "writeSeparator" true }}
   {{- end }}
-  {{- if $showShare }}
-  <span class="page_only">{{ if ($scratch.Get "writeSeparator") }}&nbsp;·{{ end }}{{ partial "share" . }}</span>
-  {{- $scratch.Set "writeSeparator" true }}
-  {{- end }}
+
   {{- if $showSeries }}
-  <div class="post_meta2"> This is a post from the
+  <blockquote_meta>
+    This is a post from the
     <a href="{{ $.Site.BaseURL }}series/{{ .Params.series | urlize }}"> {{ .Params.series }} </a> series.
     {{- if $showHraf }}
     <div>
       Who is <a href="https://0x13hrafnulf.github.io/">0x13hrafnulf</a>?
     </div>
     {{- end }}
-  </div>
+  </blockquote_meta>
   {{- end }}
   {{- if $showPostMeta }}
 </div>
