@@ -13,6 +13,11 @@
 #   url = "projects/"
 #   weight = -108
 
+[[main]]
+  name = ""
+  url = "posts/"
+  weight = -107
+
 # # Submenus are done this way: parent -> identifier
 # [[main]]
 #   name = "Links"
