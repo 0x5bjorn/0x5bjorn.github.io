@@ -52,7 +52,7 @@
       </div>
 
       <div class="timeline">
-        <h1 class="section-title">Job Experience</h1>
+        <h3 class="section-title">Job Experience</h3>
         {{ range $about_info.work }}
         <div class="timeline-item {{ if .current }} current {{ end }}">
           <div class="timeline-title"> {{ .title }} @ <a class="company" href="{{ .link }}"> {{ .company }} </a></div>
@@ -70,7 +70,7 @@
       </div>
 
       <div class="timeline">
-        <h1 class="section-title">Education</h1>
+        <h3 class="section-title">Education </h3>
         {{ range $about_info.education }}
         <div class="timeline-item">
           <div class="timeline-title"> <a class="company" href="{{ .link }}"> {{ .academy }} </a></div>

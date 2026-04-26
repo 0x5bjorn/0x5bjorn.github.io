@@ -6,7 +6,7 @@ layout: "about"
 
 Software Engineer, with the *"I can figure it out"* mindset and passion for low-level concepts and underlying implementations. Enthusiastic about rebuilding existing *"round wheels"* as *"square"* ones.
 
-### Interested in:
+### Interested in
 
 - Tools development
 - System development, architecture and design
@@ -17,7 +17,7 @@ Software Engineer, with the *"I can figure it out"* mindset and passion for low-
 - Compiler/programming language
 - Simulation programming (graphics, physics, etc.)
 
-### Recent Training:
+### Recent Training
 
 | Course | Provider | Year |
 |---------|--------------|-------------|
