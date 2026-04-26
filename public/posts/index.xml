@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Sultan (0x5bjorn)</title>
+    <link>http://localhost:1313/posts/</link>
+    <description>Recent content in Posts on Sultan (0x5bjorn)</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 15 Sep 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Simple DLL injector with GUI (dll-inj)</title>
+      <link>http://localhost:1313/posts/dll-inj/</link>
+      <pubDate>Fri, 15 Sep 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/dll-inj/</guid>
+      <description>&lt;p&gt;&lt;em&gt;in development&lt;/em&gt; &lt;a href=&#34;https://github.com/0x5bjorn/dll-inj&#34;&gt;repository&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Simple DLL injector with GUI written in C++ for educational purposes only&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/posts-media/dll-inj/demo.gif&#34; alt=&#34;demo&#34;&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;code-organization&#34;&gt;Code organization&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Application&lt;/strong&gt; - application and app window management&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Injection&lt;/strong&gt; - DLL injection implemention using Windows API&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Proc&lt;/strong&gt; - process and process modules querying handler&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;GUI&lt;/strong&gt; - GUI management using &lt;a href=&#34;https://github.com/ocornut/imgui&#34;&gt;Dear ImGui&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;OpenDialogBox&lt;/strong&gt; - file selection dialog box using Windows API&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;dll-injection&#34;&gt;DLL injection&lt;/h2&gt;&#xA;&lt;p&gt;One of the most known &lt;em&gt;code injection&lt;/em&gt; techniques in Windows environments is &lt;strong&gt;Dynamic Link Library (DLL) injection&lt;/strong&gt;. The core idea is to execute arbitrary external code in the context of running processes. This can be done by misusing legitimate Windows API functionality and its designed features. Injection is used for the following list of malicious operations:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>UMS</title>
+      <link>http://localhost:1313/posts/ums/</link>
+      <pubDate>Mon, 03 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/ums/</guid>
+      <description>&lt;h2 id=&#34;aosv-final-project-report&#34;&gt;AOSV Final Project Report&lt;/h2&gt;&#xA;&lt;p&gt;&lt;em&gt;A.Y. 2020/2021&lt;/em&gt;&lt;br&gt;&#xA;&lt;strong&gt;&lt;a href=&#34;https://github.com/0x5bjorn/AOSV-project&#34;&gt;repository&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;The goal of the project was to implement &lt;strong&gt;User Mode thread Scheduling&lt;/strong&gt; mechanism for the Linux distribution, inspired by the &lt;strong&gt;User-mode scheduling (UMS)&lt;/strong&gt; implementation available in the Windows kernel [1]. UMS is a mechanism that allows applications/programs in the user mode to schedule their own threads without involving the kernel/system scheduler. The main goal and advantage is that thread switching in user mode is &amp;ldquo;&lt;em&gt;more efficient than thread pools for managing large numbers of short-duration work items that require few system calls.&lt;/em&gt;&amp;rdquo; [2].&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,215 @@
+.sidenote {
+  display: inline;
+  counter-increment: sidenote-counter;
+}
+
+@media not all and (min-width: 1024px) {
+  .sidenote-checkbox ~ .sidenote-content {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+}
+
+.sidenote-checkbox:checked {
+  @media not all and (min-width: 1024px) {
+    & ~ .sidenote-content {
+      position: static;
+      width: auto;
+      height: auto;
+      padding: 0;
+      margin: 0;
+      overflow: visible;
+      clip: auto;
+      white-space: normal;
+    }
+  }
+  @media not all and (min-width: 1024px) {
+    & ~ .sidenote-content {
+      left: auto;
+    }
+  }
+  @media not all and (min-width: 1024px) {
+    & ~ .sidenote-content {
+      float: left;
+    }
+  }
+  @media not all and (min-width: 1024px) {
+    & ~ .sidenote-content {
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+  }
+  @media not all and (min-width: 1024px) {
+    & ~ .sidenote-content {
+      display: block;
+    }
+  }
+  @media not all and (min-width: 1024px) {
+    & ~ .sidenote-content {
+      min-width: 100%;
+    }
+  }
+  @media not all and (min-width: 1024px) {
+    & ~ .sidenote-content {
+      padding-left: 1rem;
+    }
+  }
+  @media not all and (min-width: 1024px) {
+    & ~ .sidenote-content {
+      --tw-text-opacity: 1;
+      color: rgba(2, 132, 199, var(--tw-text-opacity, 1));
+    }
+  }
+  & ~ .sidenote-mark {
+    text-decoration-line: none;
+  }
+  @media not all and (min-width: 1024px) {
+    & ~ .sidenote-mark {
+      --tw-text-opacity: 1;
+      color: rgba(2, 132, 199, var(--tw-text-opacity, 1));
+    }
+  }
+}
+
+.sidenote:active,
+.sidenote:active .sidenote-content {
+  --tw-text-opacity: 1;
+  color: rgba(2, 132, 199, var(--tw-text-opacity, 1));
+}
+
+.sidenote:hover .sidenote-mark::after,
+.sidenote:hover .sidenote-content::before {
+  --tw-text-opacity: 1;
+  color: rgba(2, 132, 199, var(--tw-text-opacity, 1));
+}
+
+.sidenote-mark {
+  &::after {
+    display: inline;
+  }
+  &::after {
+    vertical-align: super;
+  }
+  &::after {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+  &::after {
+    font-weight: 600;
+  }
+  @media not all and (min-width: 1024px) {
+    &::after {
+      display: none;
+    }
+  }
+  &::after {
+    content: counter(sidenote-counter);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .sidenote-mark {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+  }
+}
+
+@media not all and (min-width: 1024px) {
+  .sidenote-mark {
+    cursor: pointer;
+    text-decoration-line: underline;
+    text-decoration-color: #0284c7;
+    text-decoration-style: dotted;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+  }
+}
+
+.sidenote-content {
+  &::before {
+    position: absolute;
+  }
+  &::before {
+    left: -4rem;
+  }
+  &::before {
+    bottom: 0px;
+  }
+  &::before {
+    top: 0px;
+  }
+  &::before {
+    display: flex;
+  }
+  &::before {
+    width: 3.5rem;
+  }
+  &::before {
+    align-items: flex-start;
+  }
+  &::before {
+    justify-content: flex-end;
+  }
+  &::before {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+  &::before {
+    font-weight: 600;
+  }
+  @media not all and (min-width: 1024px) {
+    &::before {
+      display: none;
+    }
+  }
+  &::before {
+    content: counter(sidenote-counter) '.';
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .sidenote-content {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+  }
+}
+
+@media (min-width: 1024px) {
+  .sidenote-content {
+    position: absolute;
+    right: 0px;
+    width: 48rem;
+    cursor: default;
+  }
+}
+
+.sidenote-content {
+  @media (min-width: 1024px) {
+    margin-right: calc(-1 * 12rem - 1 * 4rem);
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.hidden {
+  display: none;
+}

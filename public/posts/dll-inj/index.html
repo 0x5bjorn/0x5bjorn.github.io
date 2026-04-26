@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Simple DLL injector with GUI (dll-inj) &middot; Sultan (0x5bjorn)</title>
+
+<meta name="description" content="Deadline-Driven Development, Hope-Based Architecture, Just-In-Time (JIT) Development, Chaos Engineering">
+<meta name="author" content="Sultan (0x5bjorn)">
+<link rel="canonical" href="http://localhost:1313/posts/dll-inj/">
+
+
+
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.webmanifest">
+
+
+<meta property="og:title" content="Simple DLL injector with GUI (dll-inj)">
+<meta property="og:description" content="in development repository
+Simple DLL injector with GUI written in C&#43;&#43; for educational purposes only
+
+Code organization
+
+Application - application and app window management
+Injection - DLL injection implemention using Windows API
+Proc - process and process modules querying handler
+GUI - GUI management using Dear ImGui
+OpenDialogBox - file selection dialog box using Windows API
+
+DLL injection
+One of the most known code injection techniques in Windows environments is Dynamic Link Library (DLL) injection. The core idea is to execute arbitrary external code in the context of running processes. This can be done by misusing legitimate Windows API functionality and its designed features. Injection is used for the following list of malicious operations:">
+<meta property="og:type" content="article">
+<meta property="og:url" content="http://localhost:1313/posts/dll-inj/">
+
+
+
+<meta property="article:section" content="posts">
+
+<meta property="article:tag" content="in development">
+
+<meta property="article:tag" content="challenge">
+
+
+<meta property="article:published_time" content="2023-09-15 00:00:00 &#43;0000 UTC">
+
+
+<meta property="article:modified_time" content="2023-09-15 00:00:00 &#43;0000 UTC">
+
+
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Simple DLL injector with GUI (dll-inj)">
+<meta name="twitter:description" content="in development repository
+Simple DLL injector with GUI written in C&#43;&#43; for educational purposes only
+
+Code organization
+
+Application - application and app window management
+Injection - DLL injection implemention using Windows API
+Proc - process and process modules querying handler
+GUI - GUI management using Dear ImGui
+OpenDialogBox - file selection dialog box using Windows API
+
+DLL injection
+One of the most known code injection techniques in Windows environments is Dynamic Link Library (DLL) injection. The core idea is to execute arbitrary external code in the context of running processes. This can be done by misusing legitimate Windows API functionality and its designed features. Injection is used for the following list of malicious operations:">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Simple DLL injector with GUI (dll-inj)",
+  "name": "Simple DLL injector with GUI (dll-inj)",
+  "description": "\u003cp\u003e\u003cem\u003ein development\u003c\/em\u003e \u003ca href=\u0022https:\/\/github.com\/0x5bjorn\/dll-inj\u0022\u003erepository\u003c\/a\u003e\u003c\/p\u003e\n\u003cp\u003eSimple DLL injector with GUI written in C\u002b\u002b for educational purposes only\u003c\/p\u003e\n\u003cp\u003e\u003cimg src=\u0022\/images\/posts-media\/dll-inj\/demo.gif\u0022 alt=\u0022demo\u0022\u003e\u003c\/p\u003e\n\u003ch2 id=\u0022code-organization\u0022\u003eCode organization\u003c\/h2\u003e\n\u003cul\u003e\n\u003cli\u003e\u003cstrong\u003eApplication\u003c\/strong\u003e - application and app window management\u003c\/li\u003e\n\u003cli\u003e\u003cstrong\u003eInjection\u003c\/strong\u003e - DLL injection implemention using Windows API\u003c\/li\u003e\n\u003cli\u003e\u003cstrong\u003eProc\u003c\/strong\u003e - process and process modules querying handler\u003c\/li\u003e\n\u003cli\u003e\u003cstrong\u003eGUI\u003c\/strong\u003e - GUI management using \u003ca href=\u0022https:\/\/github.com\/ocornut\/imgui\u0022\u003eDear ImGui\u003c\/a\u003e\u003c\/li\u003e\n\u003cli\u003e\u003cstrong\u003eOpenDialogBox\u003c\/strong\u003e - file selection dialog box using Windows API\u003c\/li\u003e\n\u003c\/ul\u003e\n\u003ch2 id=\u0022dll-injection\u0022\u003eDLL injection\u003c\/h2\u003e\n\u003cp\u003eOne of the most known \u003cem\u003ecode injection\u003c\/em\u003e techniques in Windows environments is \u003cstrong\u003eDynamic Link Library (DLL) injection\u003c\/strong\u003e. The core idea is to execute arbitrary external code in the context of running processes. This can be done by misusing legitimate Windows API functionality and its designed features. Injection is used for the following list of malicious operations:\u003c\/p\u003e",
+  "url": "http:\/\/localhost:1313\/posts\/dll-inj\/",
+  
+  "datePublished": "2023-09-15T00:00:00Z",
+  "dateModified": "2023-09-15T00:00:00Z",
+  "author": {
+    "@type": "Person",
+    "name": "Sultan (0x5bjorn)"
+  },
+  
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http:\/\/localhost:1313\/posts\/dll-inj\/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Sultan (0x5bjorn)",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http:\/\/localhost:1313\/apple-touch-icon.png"
+    }
+  }
+}
+</script>
+
+
+
+
+
+<link rel="preload" href="/fonts/google-sans-flex-regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/google-sans-flex-bold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/google-sans-code-regular.woff2" as="font" type="font/woff2" crossorigin>
+
+
+
+
+
+<link rel="stylesheet" href="/css/style.4d7210901bb48fc8062bbfed5cda9ef4ca0ce8b1409ac25fcb95a29fb87760ce.css" integrity="sha256-TXIQkBu0j8gGK7/tXNqe9MoM6LFAmsJfy5Win7h3YM4=">
+
+
+<script>
+  (function() {
+    try {
+      var theme = localStorage.getItem('theme') ||
+        (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+    } catch (e) {}
+  })();
+</script>
+
+</head>
+<body>
+  
+<header class="site-header is-sticky">
+  <div class="container header-inner">
+    <div class="site-identity">
+      <a href="/" class="site-brand">
+        
+          <img src="/images/profile.svg" alt="Sultan (0x5bjorn) logo">
+        
+        <span class="site-title">Sultan (0x5bjorn)</span>
+      </a>
+      
+        <p class="site-tagline">Deadline-Driven Development, Hope-Based Architecture, Just-In-Time (JIT) Development, Chaos Engineering</p>
+      
+    </div>
+    <button id="nav-toggle" class="nav-toggle" aria-label="Menu" aria-controls="site-nav" aria-expanded="false">
+      <svg class="icon-menu" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      <svg class="icon-close" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+    </button>
+    <nav id="site-nav" class="site-nav">
+<div class='social'>
+  <a href="https://github.com/0x5bjorn">
+    <svg class="icon">
+      <title>github</title>
+      <use xlink:href="#github"></use>
+      <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="github">
+<path d="M255.968 5.329C114.624 5.329 0 120.401 0 262.353c0 113.536 73.344 209.856 175.104 243.872 12.8 2.368 17.472-5.568 17.472-12.384 0-6.112-.224-22.272-.352-43.712-71.2 15.52-86.24-34.464-86.24-34.464-11.616-29.696-28.416-37.6-28.416-37.6-23.264-15.936 1.728-15.616 1.728-15.616 25.696 1.824 39.2 26.496 39.2 26.496 22.848 39.264 59.936 27.936 74.528 21.344 2.304-16.608 8.928-27.936 16.256-34.368-56.832-6.496-116.608-28.544-116.608-127.008 0-28.064 9.984-51.008 26.368-68.992-2.656-6.496-11.424-32.64 2.496-68 0 0 21.504-6.912 70.4 26.336 20.416-5.696 42.304-8.544 64.096-8.64 21.728.128 43.648 2.944 64.096 8.672 48.864-33.248 70.336-26.336 70.336-26.336 13.952 35.392 5.184 61.504 2.56 68 16.416 17.984 26.304 40.928 26.304 68.992 0 98.72-59.84 120.448-116.864 126.816 9.184 7.936 17.376 23.616 17.376 47.584 0 34.368-.32 62.08-.32 70.496 0 6.88 4.608 14.88 17.6 12.352C438.72 472.145 512 375.857 512 262.353 512 120.401 397.376 5.329 255.968 5.329z"></path>
+</symbol>
+    </svg>
+  </a>
+    
+  <a href="mailto:0x5bjorn@gmail.com">
+    <svg class="icon">
+      <title>mail</title>
+      <use xlink:href="#mail"></use>
+      <symbol aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="mail">
+<path  d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"></path>
+</symbol>
+    </svg>
+  </a>
+  <a href="https://www.linkedin.com/in/sultan-umarbaev-0x5bjorn">
+    <svg class="icon">
+      <title>linkedin</title>
+      <use xlink:href="#linkedin"></use>
+      <symbol viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" id="linkedin">
+<path d="M437 0H75C33.648 0 0 33.648 0 75v362c0 41.352 33.648 75 75 75h362c41.352 0 75-33.648 75-75V75c0-41.352-33.648-75-75-75zM181 406h-60V196h60zm0-240h-60v-60h60zm210 240h-60V286c0-16.54-13.46-30-30-30s-30 13.46-30 30v120h-60V196h60v11.309C286.719 202.422 296.93 196 316 196c40.691.043 75 36.547 75 79.688zm0 0"></path>
+</symbol>
+    </svg>
+  </a>
+</div>
+
+      <div class="main-nav">
+        <ul>
+          
+          
+          <li>
+            <a href="/posts/" class="">Posts</a>
+          </li>
+          
+          <li>
+            <a href="/about/" class="">About</a>
+          </li>
+          
+        </ul>
+      </div>
+      <div class="nav-utils">
+        
+        
+        <a href="/search" class="nav-search" aria-label="Search">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        </a>
+        
+        
+      </div>
+    </nav>
+  </div>
+</header>
+  <main class="site-main">
+    
+
+<div id="reading-progress" class="reading-progress" aria-hidden="true"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<div class="container">
+  <div class="layout-grid layout-grid--sidebar-left">
+    <article class="post-single main-content main-content--sidebar-left">
+      <header class="post-header">
+        <nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">Home</a></li><li class="breadcrumb-item"><a href="/posts/">Posts</a></li><li class="breadcrumb-item" aria-current="page">Simple DLL injector with GUI (dll-inj)</li>
+  </ol>
+</nav>
+        <h1 class="post-title">Simple DLL injector with GUI (dll-inj)</h1>
+        <div class="post-meta">
+          
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+              <time datetime="2023-09-15T00:00:00Z">Sep 15, 2023</time>
+            </span>
+          
+
+          
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+              Sultan (0x5bjorn)
+            </span>
+          
+
+          
+            <span class="post-categories">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-folder"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+
+              
+                
+                <a href="/categories/cybersecurity/">cybersecurity</a>
+              
+            </span>
+          
+
+          
+          <div class="post-tags">
+            
+              <a href="/tags/in-development/" class="tag-link">in development</a>
+            
+              <a href="/tags/challenge/" class="tag-link">challenge</a>
+            
+          </div>
+          
+        </div>
+      </header>
+
+      
+
+      <div class="post-content">
+        <p><em>in development</em> <a href="https://github.com/0x5bjorn/dll-inj">repository</a></p>
+<p>Simple DLL injector with GUI written in C++ for educational purposes only</p>
+<p><img src="/images/posts-media/dll-inj/demo.gif" alt="demo"></p>
+<h2 id="code-organization">Code organization</h2>
+<ul>
+<li><strong>Application</strong> - application and app window management</li>
+<li><strong>Injection</strong> - DLL injection implemention using Windows API</li>
+<li><strong>Proc</strong> - process and process modules querying handler</li>
+<li><strong>GUI</strong> - GUI management using <a href="https://github.com/ocornut/imgui">Dear ImGui</a></li>
+<li><strong>OpenDialogBox</strong> - file selection dialog box using Windows API</li>
+</ul>
+<h2 id="dll-injection">DLL injection</h2>
+<p>One of the most known <em>code injection</em> techniques in Windows environments is <strong>Dynamic Link Library (DLL) injection</strong>. The core idea is to execute arbitrary external code in the context of running processes. This can be done by misusing legitimate Windows API functionality and its designed features. Injection is used for the following list of malicious operations:</p>
+<ul>
+<li><em>Data Theft</em> - injected code has access to the memory and data available to the target process</li>
+<li><em>Evasion Tactics</em> - injected code is hidden within &ldquo;trusted&rdquo; process, making it diffucult to detect by process-based monitoring</li>
+<li><em>Privilege Escalation</em> - injected code is executed with elevated permissions</li>
+</ul>
+<p>This project is a simple implementation of the most common and classic DLL injection technique using <code>CreateRemoteThread</code> function from Windows API. This function allows us to create thread in remote target process, where it will load malicious DLL upon execution. The whole process consists of the following steps:</p>
+<h3 id="step-1-target-process-access">Step 1. Target Process Access</h3>
+<p>The first step is to open handle to target process with required permissions. This is done with the help of <code>OpenProcess</code> function by providing specific access permissions for thread creation and virutal memory operations, or <code>PROCESS_ALL_ACCESS</code>.</p>
+<h3 id="step-2-memory-allocation-and-writing">Step 2. Memory Allocation and Writing</h3>
+<p>A thread is basically a unit of execution within the process which only operates within its <em>virtual address space</em>. Every process has its own <em>virtual address space</em> (for isolation and security reasons), which is a memory allocated for that process by OS to work with. Since a thread created in the target process will load DLL, it needs to know its path. So the DLL path needs to be in the process memory. For that, <code>VirtualAllocEx</code> and <code>WriteProcessMemory</code>, to allocate memory in remote process and to write data into allocated memory correspondingly, are used by providing the process handle acquired with appropriate access rights.</p>
+<h3 id="step-3-remote-thread-creation-and-library-loading">Step 3. Remote Thread Creation and Library Loading</h3>
+<p>The final step is to create a thread using <code>CreateRemoteThread</code> which expects process handle, an address of a function to be executed and the additional function arguments. The provided function must exist in or at least be accessible to the remote process. In this case, the address of the <code>LoadLibraryA</code> function with the DLL path as its argument needs to be provided for the thread to load DLL. This function is defined in <code>Kernel32</code> library (one of the essential libraries mapped into every process memory in Windows OS), which luckily is mapped similarly in each process memory while OS is running. Therefore, the address of <code>LoadLibraryA</code> in <em>injector</em> process and target process are identical.</p>
+<p>Once all the steps are done, the code located in the DLL’s <code>DllMain</code> will be executed in the address space of the target process.</p>
+<h2 id="improvements">Improvements</h2>
+<ul>
+<li>Implement thread pool for thread reuse (currently a simple thread creation and deletion mechanism is utilized)</li>
+</ul>
+<h2 id="references">References</h2>
+<ul>
+<li>Windows process and its modules(dll) listing - <a href="https://learn.microsoft.com/en-us/windows/win32/toolhelp/taking-a-snapshot-and-viewing-processes">https://learn.microsoft.com/en-us/windows/win32/toolhelp/taking-a-snapshot-and-viewing-processes</a></li>
+<li>Native Windows File Selection prompt - <a href="https://learn.microsoft.com/en-us/windows/win32/learnwin32/example--the-open-dialog-box">https://learn.microsoft.com/en-us/windows/win32/learnwin32/example--the-open-dialog-box</a></li>
+<li>Process injection -
+<ul>
+<li><a href="https://www.ired.team/offensive-security/code-injection-process-injection/dll-injection">https://www.ired.team/offensive-security/code-injection-process-injection/dll-injection</a></li>
+<li><a href="https://ctfcracker.gitbook.io/process-injection/process-injection-part-2">https://ctfcracker.gitbook.io/process-injection/process-injection-part-2</a></li>
+<li><a href="https://tbhaxor.com/createremotethread-process-injection/">https://tbhaxor.com/createremotethread-process-injection/</a></li>
+</ul>
+</li>
+<li>ImGUI - <a href="https://github.com/ocornut/imgui">https://github.com/ocornut/imgui</a></li>
+</ul>
+
+      </div>
+
+      <footer>
+        
+      </footer>
+    </article>
+
+    
+    
+      
+
+
+
+
+<aside class="sidebar">
+  
+  
+    <aside class="toc">
+  <h2 class="toc-title">Table of Contents</h2>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#code-organization">Code organization</a></li>
+    <li><a href="#dll-injection">DLL injection</a>
+      <ul>
+        <li><a href="#step-1-target-process-access">Step 1. Target Process Access</a></li>
+        <li><a href="#step-2-memory-allocation-and-writing">Step 2. Memory Allocation and Writing</a></li>
+        <li><a href="#step-3-remote-thread-creation-and-library-loading">Step 3. Remote Thread Creation and Library Loading</a></li>
+      </ul>
+    </li>
+    <li><a href="#improvements">Improvements</a></li>
+    <li><a href="#references">References</a></li>
+  </ul>
+</nav>
+</aside>
+  
+
+  
+  
+    
+    
+      <div class="widget-area">
+        
+          
+<div class="widget widget-recent">
+  <h3 class="widget-title">Recent Posts</h3>
+  <ul>
+    
+    
+    <li>
+      <a href="/posts/dll-inj/">Simple DLL injector with GUI (dll-inj)</a>
+      <time datetime="2023-09-15T00:00:00Z">Sep 15, 2023</time>
+    </li>
+    
+    <li>
+      <a href="/posts/ums/">UMS</a>
+      <time datetime="2023-07-03T00:00:00Z">Jul 3, 2023</time>
+    </li>
+    
+  </ul>
+</div>
+        
+          
+<div class="widget widget-categories">
+  <h3 class="widget-title">Categories</h3>
+  
+  <ul>
+    
+    
+    <li><a href="/categories/cybersecurity/">Cybersecurity</a><span class="widget-count">1</span></li>
+    
+  </ul>
+  
+</div>
+
+        
+          
+<div class="widget widget-tags">
+  <h3 class="widget-title">Tags</h3>
+  
+  <ul>
+    
+    
+    <li><a href="/tags/academic/">Academic</a></li>
+    
+    <li><a href="/tags/challenge/">Challenge</a></li>
+    
+    <li><a href="/tags/in-development/">In Development</a></li>
+    
+  </ul>
+  
+</div>
+
+        
+      </div>
+    
+  
+</aside>
+
+    
+  </div>
+
+  
+    
+<nav class="post-nav">
+  
+  <a href="/posts/ums/" class="nav-prev">
+    <span class="nav-arrow">&larr;</span>
+    <span class="nav-title">UMS</span>
+  </a>
+  
+  
+</nav>
+
+
+  
+
+  
+    
+
+
+
+  
+</div>
+
+  </main>
+  
+<footer class="site-footer">
+  <div class="container">
+    
+    
+    <div class="copyright">
+      <p>
+        Copyright 2026 SULTAN (0X5BJORN). All Rights Reserved
+      </p>
+      Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> &amp; <a href="https://github.com/yogirk/explore" target="_blank" rel="noopener">Explore Theme</a>.
+    </div>
+  </div>
+</footer>
+
+  
+  <script src="/js/minimal.min.6a9ca11052c7f4a8a7596e64d3b60b3b1040bc4e6c825054f99533c3126a84a6.js" integrity="sha256-apyhEFLH9KinWW5k07YLOxBAvE5sglBU&#43;ZUzwxJqhKY=" crossorigin="anonymous" defer></script>
+  
+  
+</body>
+</html>

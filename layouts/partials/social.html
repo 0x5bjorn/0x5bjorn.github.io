@@ -1,0 +1,26 @@
+{{- $base := absURL "" }}
+{{- $items := .Site.Data.social }}
+{{- $social := .Site.Menus.social }}
+{{- with $social }}
+  {{- $items = . }}
+{{- end }}
+<div class='social'>
+  {{- range $items }}
+  {{- $url := .URL }}
+  {{- $label := lower .Name }}
+  {{- if eq $social nil }}
+    {{ $url = .url }}
+    {{ $label = lower .item }}
+  {{- end }}
+  {{- if and (eq (hasPrefix $url $base) false) (eq (hasPrefix $url "http") false) }}
+    {{ $url = absLangURL $url }}
+  {{- end }}
+  <a href="{{ $url }}">
+    <svg class="icon">
+      <title>{{ $label }}</title>
+      <use xlink:href="#{{ $label }}"></use>
+      {{ partial (printf "icons/%s.html" $label) . }}
+    </svg>
+  </a>
+  {{- end }}
+</div>

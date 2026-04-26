@@ -1,0 +1,106 @@
+{{ define "main" }}
+{{ $cfg := partial "func/defaults" . }}
+<div id="reading-progress" class="reading-progress" aria-hidden="true"></div>
+{{/* Determine sidebar position from front matter, then site config */}}
+{{ $widgetSidebarPosition := .Params.sidebar.position | default $cfg.sidebar.globalPosition }}
+
+{{/* Determine ToC settings */}}
+{{ $siteTocConfig := $cfg.single.toc }}
+{{ $pageTocConfig := .Params.toc }}
+
+{{/* Start with site-wide defaults */}}
+{{ $tocEnabled := $siteTocConfig.enable }}
+{{ $tocPosition := $siteTocConfig.position }}
+
+{{/* Handle page-level overrides from front matter */}}
+{{ if isset .Params "toc" }}
+  {{ if reflect.IsMap $pageTocConfig }}
+    {{/* If toc is a map, check for 'enable' and 'position' keys */}}
+    {{ with $pageTocConfig.enable }}{{ $tocEnabled = . }}{{ end }}
+    {{ with $pageTocConfig.position }}{{ $tocPosition = . }}{{ end }}
+  {{ else }}
+    {{/* Otherwise, assume it's a boolean to just enable/disable */}}
+    {{ $tocEnabled = $pageTocConfig }}
+  {{ end }}
+{{ end }}
+
+{{ $showToc := and $tocEnabled (ne .TableOfContents "") (ne $tocPosition "off") }}
+
+{{/* Determine final layout based on ToC and widget sidebars */}}
+{{ $layoutPosition := "none" }}
+{{ if and $showToc (or (eq $tocPosition "left") (eq $tocPosition "right")) }}
+  {{ $layoutPosition = $tocPosition }}
+{{ else if or (eq $widgetSidebarPosition "left") (eq $widgetSidebarPosition "right") }}
+  {{ $layoutPosition = $widgetSidebarPosition }}
+{{ end }}
+
+{{ $about_info := .Site.Data.about.info }}
+
+<div class="container">
+  <div class="layout-grid {{ if ne $layoutPosition "none" }}layout-grid--sidebar-{{ $layoutPosition }}{{ end }}">
+    <article class="post-single main-content {{ if eq $layoutPosition "left" }}main-content--sidebar-left{{ end }}">
+      <header class="post-header">
+        <h1 class="post-title">{{ .Title }}</h1>
+      </header>
+
+      <!-- {{ if and $showToc (eq $tocPosition "inline") }}
+        {{ partial "toc.html" . }}
+      {{ end }} -->
+
+      <div class="post-content">
+        {{ .Content }}
+      </div>
+
+      <div class="timeline">
+        <h1 class="section-title">Job Experience</h1>
+        {{ range $about_info.work }}
+        <div class="timeline-item {{ if .current }} current {{ end }}">
+          <div class="timeline-title"> {{ .title }} @ <a class="company" href="{{ .link }}"> {{ .company }} </a></div>
+          <div class="timeline-status"> {{ .duration }} </div>
+          <div class="timeline-sub-title"> Tech stack: {{ .techStack }} </div>
+          <div class="job-description">
+            <ul>
+              {{ range .description }}
+              <li>{{ .point }}</li>
+              {{ end }}
+            </ul>
+          </div>
+        </div>
+        {{ end }}
+      </div>
+
+      <div class="timeline">
+        <h1 class="section-title">Education</h1>
+        {{ range $about_info.education }}
+        <div class="timeline-item">
+          <div class="timeline-title"> <a class="company" href="{{ .link }}"> {{ .academy }} </a></div>
+          <div class="timeline-status"> {{ .year }} </div>
+          <div class="timeline-sub-title"> {{ .title }} </div>
+          <div class="job-description">
+            <ul>
+              {{ range .description }}
+              <li>{{ .point }}</li>
+              {{ end }}
+            </ul>
+          </div>
+        </div>
+        {{ end }}
+      </div>
+
+    </article>
+
+    {{/* Render sidebar if position is left or right */}}
+    {{ if ne $layoutPosition "none" }}
+      {{ partial "sidebar.html" (dict "context" . "widgetSidebarPosition" $widgetSidebarPosition) }}
+    {{ end }}
+  </div>
+
+  {{ if $cfg.single.showPrevNext }}
+    {{ partial "post/prevnext.html" . }}
+  {{ end }}
+
+  {{ if $cfg.single.showRelated }}
+    {{ partial "post/related.html" . }}
+  {{ end }}
+</div>
+{{ end }}
