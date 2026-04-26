@@ -24,7 +24,7 @@
   margin-top: var(--space-l);
   text-transform: none;
   letter-spacing: -0.025em;
-  /* border-bottom: 2px solid var(--color-primary); */
+  border-bottom: 2px solid color-mix(in srgb, var(--color-border) 100%, transparent);
   padding-bottom: var(--space-s);
   font-family: var(--font-heading);
 }
@@ -306,5 +306,88 @@
 
   .project-card {
     padding: var(--space-m);
+  }
+}
+
+/* ------------------------------------------------------------
+   Training table (image-inspired, theme-token based)
+------------------------------------------------------------ */
+.training-table-wrap {
+  margin-top: var(--space-xl);
+  margin-bottom: var(--space-l);
+}
+
+.training-table-title {
+  margin: 0 0 var(--space-m) 0;
+  font-family: var(--font-heading);
+  font-size: var(--text-xl);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--color-text);
+}
+
+.training-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  background: color-mix(in srgb, var(--color-background) 85%, transparent);
+  /* border-top: var(--border-width) solid color-mix(in srgb, var(--color-border) 75%, transparent); */
+  border-bottom: var(--border-width) solid color-mix(in srgb, var(--color-border) 75%, transparent);
+}
+
+.training-table thead th {
+  padding: var(--space-m) var(--space-s);
+  font-family: var(--font-code);
+  font-size: var(--text-base);
+  letter-spacing: 0.08em;
+  color: var(--color-text);
+  border-bottom: var(--border-width) solid color-mix(in srgb, var(--color-border) 65%, transparent);
+}
+
+.training-table tbody td {
+  padding: calc(var(--space-s) + 1px) var(--space-s);
+  font-family: var(--font-code);
+  font-size: var(--text-sm);
+  color: color-mix(in srgb, var(--color-text) 90%, var(--color-text-offset));
+  border-bottom: var(--border-width) solid color-mix(in srgb, var(--color-border) 45%, transparent);
+  line-height: 1.45;
+}
+
+.training-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.training-table :is(th, td):first-child {
+  width: 65%;
+  text-align: left;
+}
+
+.training-table :is(th, td):nth-child(2) {
+  width: 45%;
+  text-align: left;
+}
+
+.training-table :is(th, td):last-child {
+  width: 16%;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.training-table tbody tr:hover td {
+  color: var(--color-text);
+  background: color-mix(in srgb, var(--color-background-offset) 70%, transparent);
+}
+
+@media (max-width: 960px) {
+  .training-table {
+    table-layout: auto;
+  }
+
+  .training-table-title {
+    letter-spacing: 0.08em;
+  }
+
+  .training-table :is(th, td) {
+    font-size: var(--text-xs);
   }
 }

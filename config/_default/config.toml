@@ -11,7 +11,7 @@ title = "Sultan (0x5bjorn)"
 summaryLength = 70
 
 # Google analytics Id
-# ga_analytics = "G-HFYFGCFTKD"
+ga_analytics = "G-HFYFGCFTKD"
 
 # ============================================================
 # Outputs & Build
@@ -62,7 +62,7 @@ summaryLength = 70
   # Site-wide meta description for SEO.
   description = "Deadline-Driven Development, Hope-Based Architecture, Just-In-Time (JIT) Development, Chaos Engineering"
   # Path to logo image in the static/ folder. Leave empty to show the site title as text.
-  logo = "images/profile.svg"
+  logo = "logos/profile.svg"
   # Short tagline displayed under the site title/logo in the header.
   tagline = "Deadline-Driven Development, Hope-Based Architecture, Just-In-Time (JIT) Development, Chaos Engineering"
   # Date format used across all templates (Go reference time layout).

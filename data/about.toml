@@ -86,6 +86,13 @@ techStack = "C/C++ with Arduino, Mosquitto, Telegraf, InfluxDB, Docker"
     [[info.work.description]]
     point = "Implemented basic mesh network using NodeMCU devices (with ESP8266 WiFi chips) to transmit data between nodes and store it in database"
 
+# --- TRAINING
+[[info.training]]
+link = "https://learn.kodekloud.com/user/courses/cka-certification-course-certified-kubernetes-administrator"
+course = "Certified Kubernetes Administrator (CKA)"
+provider = "KodeKloud"
+year = "2026"
+
 
 # --- EDUCATION
 [[info.education]]
