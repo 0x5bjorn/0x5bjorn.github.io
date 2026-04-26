@@ -269,6 +269,7 @@
 
 .icon {
   display: inline-flex;
+  fill: var(--color-text);
   justify-content: center;
   align-items: center;
   margin: 0 0.4rem;
