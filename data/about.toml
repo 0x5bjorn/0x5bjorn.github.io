@@ -16,7 +16,7 @@ techStack = "Docker Swarm, Gitlab CI/CD, Nginx, Java, Spring Boot, Golang, Grafa
     [[info.work.description]]
     point = "Keycloak custom plugin development"
     [[info.work.description]]
-    point = "Internal service development and maintenance (client certs service, config service)"
+    point = "Internal service and library development and maintenance (client certs service, config service, logger library)"
 
 # [[info.work]]
 # link = "https://o.kg/"
