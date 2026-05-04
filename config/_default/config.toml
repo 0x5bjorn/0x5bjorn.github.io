@@ -10,9 +10,6 @@ title = "Sultan (0x5bjorn)"
 # Default length of generated summaries (in words).
 summaryLength = 70
 
-# Google analytics Id
-ga_analytics = "G-HFYFGCFTKD"
-
 # ============================================================
 # Outputs & Build
 # ============================================================
@@ -137,6 +134,11 @@ ga_analytics = "G-HFYFGCFTKD"
       enable = true
       # ToC placement. Options: "inline" (within content), "left", "right", "off". Default: "inline"
       position = "left"
+
+# ---- Analytics ----
+  [params.analytics]
+    provider = "google"
+    id = "G-HFYFGCFTKD"
 
 # ============================================================
 # Navigation Menu
