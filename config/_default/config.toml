@@ -160,6 +160,11 @@ summaryLength = 70
   #   name = "Projects"
   #   url = "/projects/"
   #   weight = 30
+  [[menu.main]]
+    identifier = "mentions"
+    name = "Mentions"
+    url = "/mentions/"
+    weight = 40
   
   [[menu.social]]
     name = "github"
