@@ -16,13 +16,15 @@ Sharing links to people I admire/respect and to some interesting and/or useful r
 - [offlinemark](https://offlinemark.com) (OS development)
 - [eatonphil](https://eatonphil.com/) (tech writings)
 - [codepr](https://codepr.github.io/) (tools and software reinvention)
-- [werwolv](https://werwolv.net/) (embedded systems tools, low level software, firmware and hardware)
+- [werwolv](https://werwolv.net/) (embedded systems and low level software)
 
 ### Resources/learnings
 
 - [build-your-own-x](https://github.com/codecrafters-io/build-your-own-x)
 - [papers-we-love](https://github.com/papers-we-love/papers-we-love)
 - [project-based-learning](https://github.com/practical-tutorials/project-based-learning)
-- [cpu.land](https://cpu.land/)
+- [cpu land](https://cpu.land/)
+- [iximiuz labs](https://labs.iximiuz.com/)
+- [sadservers](https://sadservers.com/)
 - [egos](https://egos.fun/)
 - [leetcpu](https://www.leetcpu.com/)
