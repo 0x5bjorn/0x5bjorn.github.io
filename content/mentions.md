@@ -20,11 +20,11 @@ Sharing links to people I admire/respect and to some interesting and/or useful r
 
 ### Resources/learnings
 
-- [build-your-own-x](https://github.com/codecrafters-io/build-your-own-x)
-- [papers-we-love](https://github.com/papers-we-love/papers-we-love)
-- [project-based-learning](https://github.com/practical-tutorials/project-based-learning)
-- [cpu land](https://cpu.land/)
-- [iximiuz labs](https://labs.iximiuz.com/)
-- [sadservers](https://sadservers.com/)
-- [egos](https://egos.fun/)
-- [leetcpu](https://www.leetcpu.com/)
+- [build-your-own-x](https://github.com/codecrafters-io/build-your-own-x) (software development and reinvention)
+- [papers-we-love](https://github.com/papers-we-love/papers-we-love) (research papers)
+- [project-based-learning](https://github.com/practical-tutorials/project-based-learning) (software development and reinvention)
+- [iximiuz labs](https://labs.iximiuz.com/) (DevOps, SRE, and Platform Engineers learning platform)
+- [sadservers](https://sadservers.com/) (Linux & DevOps challenges)
+- [leetcpu](https://www.leetcpu.com/) (playground for exploring and optimizing CPU performance)
+<!-- - [cpu land](https://cpu.land/) -->
+<!-- - [egos](https://egos.fun/) -->

@@ -88,7 +88,13 @@ techStack = "C/C++ with Arduino, Mosquitto, Telegraf, InfluxDB, Docker"
 
 # --- TRAINING
 [[info.training]]
-link = "https://learn.kodekloud.com/user/courses/cka-certification-course-certified-kubernetes-administrator"
+link = "https://learn.kodekloud.com/certificate/2338cc81-3b94-4632-89de-45f457ef851d"
+course = "Certified Kubernetes Application Developer (CKAD)"
+provider = "KodeKloud"
+year = "2026"
+
+[[info.training]]
+link = "https://learn.kodekloud.com/certificate/c7a01a72-96fd-424a-ae25-3e7d9978d3d6"
 course = "Certified Kubernetes Administrator (CKA)"
 provider = "KodeKloud"
 year = "2026"
