@@ -51,25 +51,7 @@
         {{ .Content }}
       </div>
 
-      <div class="timeline">
-        <h2 class="section-title">Job Experience</h2>
-        {{ range $about_info.work }}
-        <div class="timeline-item {{ if .current }} current {{ end }}">
-          <div class="timeline-title"> {{ .title }} @ <a class="company" href="{{ .link }}"> {{ .company }} </a></div>
-          <div class="timeline-status"> {{ .duration }} </div>
-          <div class="timeline-sub-title"> Tech stack: {{ .techStack }} </div>
-          <div class="job-description">
-            <ul>
-              {{ range .description }}
-              <li>{{ .point }}</li>
-              {{ end }}
-            </ul>
-          </div>
-        </div>
-        {{ end }}
-      </div>
-
-      <section class="training-table-wrap" aria-labelledby="recent-training-title">
+      <div class="training-table-wrap" aria-labelledby="recent-training-title">
         <h2 id="recent-training-title" class="section-title">Recent Training</h2>
         <table class="training-table">
           <thead>
@@ -91,7 +73,25 @@
             {{ end }}
           </tbody>
         </table>
-      </section>
+      </div>
+
+      <div class="timeline">
+        <h2 class="section-title">Job Experience</h2>
+        {{ range $about_info.work }}
+        <div class="timeline-item {{ if .current }} current {{ end }}">
+          <div class="timeline-title"> {{ .title }} @ <a class="company" href="{{ .link }}"> {{ .company }} </a></div>
+          <div class="timeline-status"> {{ .duration }} </div>
+          <div class="timeline-sub-title"> Tech stack: {{ .techStack }} </div>
+          <div class="job-description">
+            <ul>
+              {{ range .description }}
+              <li>{{ .point }}</li>
+              {{ end }}
+            </ul>
+          </div>
+        </div>
+        {{ end }}
+      </div>
 
       <div class="timeline">
         <h2 class="section-title">Education</h2>
@@ -110,7 +110,6 @@
         </div>
         {{ end }}
       </div>
-
     </article>
 
     {{/* Render sidebar if position is left or right */}}
