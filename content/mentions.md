@@ -3,7 +3,7 @@ title: "Mentions"
 layout: "mentions"
 ---
 
-Sharing links to people I admire/respect and to some interesting and/or useful resources/learnings
+Sharing links to people I admire/respect or in general recommend their content, and to some interesting and/or useful resources/learnings
 
 ### People
 
@@ -12,10 +12,14 @@ Sharing links to people I admire/respect and to some interesting and/or useful r
 - [caseymuratori](https://caseymuratori.com) (game and game engine development, systems programming, programming concepts)
 - [SebastianLague](https://www.youtube.com/@SebastianLague) (simulations programming)
 - [TheCherno](https://www.youtube.com/TheChernoProject) (game engine development)
+- [gingerBill](https://www.gingerbill.org/) (programming language development, programming concepts)
+- [Primeagen](https://www.youtube.com/@ThePrimeTimeagen) (tech news and talks)
+- [tsoding](https://www.youtube.com/@TsodingDaily) (tools and software reinvention)
 - [fasterthanlime](https://fasterthanli.me/) (tools and software development)
 - [offlinemark](https://offlinemark.com) (OS development)
 - [eatonphil](https://eatonphil.com/) (tech writings)
 - [codepr](https://codepr.github.io/) (tools and software reinvention)
+- [Ben Eater](https://eater.net/) (electronics, computer architecture, networking)
 - [werwolv](https://werwolv.net/) (embedded systems and low level software)
 
 ### Resources/learnings
